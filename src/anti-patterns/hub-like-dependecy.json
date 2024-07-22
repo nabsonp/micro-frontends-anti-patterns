@@ -1,0 +1,19 @@
+{
+    "name": "Hub-Like Dependecy",
+    "category": "Intra-frontend",
+    "problem": {
+      "text": "A screen of a MFE integrates fragments from several other MFEs, becoming a central point of interdependence. Any issue occurring in the main screen or one of its fragments can affect all other fragments present on it.",
+      "image": "hub-like-dependecy-problem.png",
+      "description": ""
+    },
+    "example": {
+        "text": "Consider a digital banking system where the main screen is an MFE that integrates several fragments from other MFEs, such as an investment list, a chart showing bitcoin value variations, account balance, and credit card statement amount. This structure introduces a significant vulnerability: a single faulty fragment can potentially disrupt the entire main screen. Consider a scenario where an issue within the investment list fragment causes it to malfunction. This malfunction could manifest as data display errors, unresponsive controls, or even complete crashes. The consequences of such an incident extend beyond the affected fragment, rendering the entire main screen and other fragments unusable and inaccessible to the user.",
+        "image": "hub-like-dependecy-example.png",
+        "description": ""
+      },
+    "solution": {
+        "text": "To prevent a single fragment failure from crashing the entire main screen, the screen should be kept as simple as possible, and each fragment should implement robust error handling mechanisms. This can be achieved by implementing a strategy where uncaught errors within a fragment gracefully degrade its functionality, displaying a user-friendly fallback message. This approach ensures that users are informed of the issue without hindering their interaction with the remaining functionalities on the main screen.",
+        "image": "hub-like-dependecy-solution.png",
+        "description": ""
+      }
+  }
