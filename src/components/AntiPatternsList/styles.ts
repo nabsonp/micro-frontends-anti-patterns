@@ -44,7 +44,7 @@ export const AntiPatternItemDescriptionText = styled(Text).attrs({
   lineHeight: '24px',
   textColor: 'paragraph-text',
   maxWidth: '70%',
-  noOfLines: 2,
+  noOfLines: 4,
 })``;
 
 export const AntiPatternItemTitle = styled(Text).attrs({
