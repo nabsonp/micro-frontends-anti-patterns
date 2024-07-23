@@ -1,0 +1,19 @@
+{
+  "name": "Mega Frontend",
+  "category": "Intra-frontend",
+  "problem": {
+    "text": "Decomposing the architecture into a few MFEs encompassing numerous screens and fragments manifest this anti pattern. The MFE inherits the challenges of a monolithic frontend, such as difficulties in testing, slow builds and deployments, high coupling between its components, lack of modularity, and limited scalability.",
+    "image": "",
+    "description": ""
+  },
+  "example": {
+      "text": "An e-commerce system is decomposed into just two MFEs, with mfe-users related to users and mfe-shopping related to products and purchases. The latter MFE includes screens that display product listings, product details, purchase confirmations, and purchase history. Decomposing the mfe-shopping into at least two MFEs is necessary: one containing the product listing and product details screens, belonging to the product domain; and another containing the confirmation and purchase history screens, belonging to the purchase domain.",
+      "image": "",
+      "description": ""
+    },
+  "solution": {
+      "text": "To avoid this problem, the development team must work closely with the product team to gain a deep understanding of the domains and reflect them accurately in the architecture. To fix this issue, the team should reevaluate the architecture and divide the MFEs into more granular units, separating functionalities into smaller and specialized MFEs based on domains. This approach helps reduce complexity, enhance maintainability, and foster a modular and scalable architecture.",
+      "image": "",
+      "description": ""
+    }
+}

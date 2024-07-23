@@ -1,0 +1,16 @@
+{
+  "short_name": "Micro frontends Anti-patterns",
+  "name": "Micro frontends Anti-patterns Catalog",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "150x150",
+      "type": "image/svg+xml",
+      "purpose": "any"
+  }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2196F3",
+  "background_color": "#F4F5FA"
+}

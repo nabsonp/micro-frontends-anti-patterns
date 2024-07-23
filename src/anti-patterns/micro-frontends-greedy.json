@@ -1,0 +1,19 @@
+{
+  "name": "Micro Frontends Greedy",
+  "category": "Intra-frontend",
+  "problem": {
+    "text": "When a developer is uncertain about creating a new MFE, the common practice is to opt for its creation. Whenever a need arises to develop a new set of screens or fragments, a new MFE is instantiated. This can lead to an explosion in the number of MFEs, making the system difficult to understand and increasing the likelihood of both nano and mega frontends emerging.",
+    "image": "",
+    "description": ""
+  },
+  "example": {
+      "text": "Within a banking application, an MFE encompasses screens for security validation, utilizing confirmation code submission via email. Subsequently, the need arose to implement a new validation method, now employing facial recognition. The screens in this new flow differ from those in the previous flow, resulting in its implementation through a new MFE. Creating a new MFE might not be advisable, as two MFEs have the same context and functionalities.",
+      "image": "",
+      "description": ""
+    },
+  "solution": {
+      "text": "To determine where to implement a new feature composed of a set of screens and/or fragments, the domain of the new feature must first be defined. If it falls within the domain of an existing MFE, it should be implemented there. In this case, a summary of all MFEs, their contexts, and domains can help identify the best fit for the new feature. If it belongs to a brand new domain, one or more MFEs should be defined based on the domain definition. Establishing well-defined domains relies on the collaboration between the development and product teams to accurately define boundaries.",
+      "image": "",
+      "description": ""
+    }
+}

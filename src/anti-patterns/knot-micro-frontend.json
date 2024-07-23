@@ -1,0 +1,19 @@
+{
+  "name": "Knot Micro Frontend",
+  "category": "Inter-frontend",
+  "problem": {
+    "text": "A Knot is composed of three or more MFEs whose communication with each other uses a context-specific interface. This means that navigation and data exchange between screens and fragments heavily depend on the unique context of each MFE involved. Adding new MFEs exacerbates the problem: as the number of MFEs grows, the interface complexity increases due to the introduction of new contexts creating a highly coupled Knot that becomes difficult to maintain and integrate new functionalities.",
+    "image": "",
+    "description": ""
+  },
+  "example": {
+      "text": "Suppose an e-commerce system has MFEs for Digital Products (mfe-digital-products) and Payments (mfe-payments). The product details screen of mfe-digital-products navigates to the payment screen of mfe-payments, passing the product data as a parameter. At a later stage, a Physical Products MFE (mfe-physical-products) is implemented, including screens like delivery tracking, address listing, and address registration. For the unpaid physical products, a modification in the mfe-payments payment screen happens for receiving data of either digital or physical products. Later, adding new product types requires constantly adjusting the payment screen of mfe-payments to display the data for these products. Implementing a communication interface with the following fields would allow the addition of new products without requiring adaptations in mfe-payments. This interface definition must allow the transmission of product details in a uniform format for all types of products. Furthermore, it permits the optional transmission of delivery information and specifies whether delivery information can be provided.",
+      "image": "",
+      "description": ""
+    },
+  "solution": {
+      "text": "A practical solution to address the Knots is to implement domain-driven communication interfaces. These interfaces define a contract based on the domain model, specifying what data and functionalities each MFE needs to interact with others. This approach allows MFEs to understand the integration requirements without being concerned about the specific implementation details of data structures or internal logic within another MFE. Consider the scenario mentioned earlier: a Product entity encompasses various product types, and the payment screen relies on it. Instead of a context-specific interface tied to each product type, a domain-driven Product interface could be established. Adding new types of products wouldn't disrupt communication as long as they adhere to the core Product interface.",
+      "image": "",
+      "description": ""
+    }
+}
