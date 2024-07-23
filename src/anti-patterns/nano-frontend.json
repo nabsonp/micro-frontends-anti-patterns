@@ -1,0 +1,19 @@
+{
+  "name": "Nano Frontend",
+  "category": "Intra-frontend",
+  "problem": {
+    "text": "The front end decomposes into numerous small MFEs with few screens or fragments. Small MFEs do not justify the cost of their maintenance. Furthermore, the presence of nano frontends can lead to issues of high coupling and the manifestation of other anti-patterns, such as cyclic dependency",
+    "image": "",
+    "description": ""
+  },
+  "example": {
+      "text": "In an e-commerce setting, separate MFEs implement the product listing and product details screens. Since both are part of the product context, their implementation should happen within a single MFE encompassing all product screens.",
+      "image": "",
+      "description": ""
+    },
+  "solution": {
+      "text": "The issue of nano frontends arises when the definition of boundaries is inadequately and excessively granular. Adhering to Domain-driven Design (DDD) principles is necessary to ensure an effective decomposition of MFEs. Therefore, the development team must work closely with the product team to gain a deep understanding of the domains and reflect them accurately in the architecture. To solve this issue, the architecture must be redesigned by grouping MFEs with the same domain is necessary. For minor variations within a domain, consider using templates or component libraries. This approach avoids creating a separate MFE for each slight variation, promoting efficiency and code reuse.",
+      "image": "",
+      "description": ""
+    }
+}

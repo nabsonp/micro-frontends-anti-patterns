@@ -1,6 +1,6 @@
 {
     "name": "Hub-Like Dependecy",
-    "category": "Intra-frontend",
+    "category": "Inter-frontend",
     "problem": {
       "text": "A screen of a MFE integrates fragments from several other MFEs, becoming a central point of interdependence. Any issue occurring in the main screen or one of its fragments can affect all other fragments present on it.",
       "image": "hub-like-dependecy-problem.png",

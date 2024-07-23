@@ -1,0 +1,19 @@
+{
+  "name": "Golden Hammer",
+  "category": "Development",
+  "problem": {
+    "text": "All MFEs utilize the same technology, even if it does not meet the specific needs of each MFE. It happens due to developers' familiarity with only one specific technology. This approach limits the architecture, failing to take advantage of the benefits of the possibility of a heterogeneous architecture, which is one of the main attractions of adopting MFEs.",
+    "image": "",
+    "description": ""
+  },
+  "example": {
+      "text": "A web application contains MFEs implemented using ReactJS framework with Client-side Rendering, even those encompassing essential pages such as the landing page. This technological uniformity overlooks the necessity for Search Engine Optimization (SEO) strategies to ensure better rankings on search engines like Google. It would be advisable to utilize ReactJS with Server-side Rendering or employ a static rendering framework such as NextJS, enabling better optimization for search engines.",
+      "image": "",
+      "description": ""
+    },
+  "solution": {
+      "text": "To choose the most suitable technology that addresses the specific challenges of each MFE, which includes adopting the correct programming languages, frameworks, and libraries during its development. When uncertain about a particular technology, conducting a proof-of-concept (POC) can validate its suitability. Testing new technologies through POCs helps validate their suitability without compromising the establishment of standardized patterns within the company. However, it's important to note that increasing the variety of technologies can increase the complexity of the architecture.",
+      "image": "",
+      "description": ""
+    }
+}
