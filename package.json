@@ -1,8 +1,8 @@
 {
-  "name": "micro-frontends-anti-partterns",
+  "name": "micro-frontends-anti-patterns",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://nabsonp.github.io/micro-frontend-anti-partterns",
+  "homepage": "https://nabsonp.github.io/micro-frontends-anti-patterns",
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
