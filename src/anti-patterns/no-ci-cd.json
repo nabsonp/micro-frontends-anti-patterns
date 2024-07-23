@@ -1,5 +1,5 @@
 {
-  "name": "No CI/CD",
+  "name": "No CI&CD",
   "category": "Operations",
   "problem": {
     "text": "The company lacks an automated Continuous Integration (CI) and Continuous Delivery (CD) pipeline, so developers must manually execute tests and perform deployments. This manual process becomes burdensome, especially with the potential existence of multiple MFEs. It increases development time, reduces productivity, and raises the risk of errors in the production environment.",
