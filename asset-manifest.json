@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.js": "/static/js/main.95817aa5.js",
-    "static/js/453.b17c1d85.chunk.js": "/static/js/453.b17c1d85.chunk.js",
-    "static/media/hub-like-dependecy-example.png": "/static/media/hub-like-dependecy-example.79a36ef28f480ae94d4e.png",
-    "static/media/hub-like-dependecy-solution.png": "/static/media/hub-like-dependecy-solution.261ee7afb005021e99e0.png",
-    "static/media/old-header-logo.svg": "/static/media/old-header-logo.af471ca74a152728a167.svg",
-    "static/media/hub-like-dependecy-problem.png": "/static/media/hub-like-dependecy-problem.348a8aaba6f122087493.png",
-    "static/media/header-logo.svg": "/static/media/header-logo.d780e027bfcfa7e8a8c43a2f8ab1d342.svg",
-    "static/media/cyclic-dependecy-solution.png": "/static/media/cyclic-dependecy-solution.e5df6a41bade749c8542.png",
-    "static/media/cyclic-dependecy-problem.png": "/static/media/cyclic-dependecy-problem.2e45ee9e0d2b98a1e09e.png",
-    "static/media/search-not-found.svg": "/static/media/search-not-found.137e9f81daba30ea54d90542979249ec.svg",
-    "static/media/description-icon.svg": "/static/media/description-icon.477b973c4b54d362094542128809180f.svg",
-    "static/media/example-icon.svg": "/static/media/example-icon.5dc12e5b77a1051e6a18f1bdbb01ac58.svg",
-    "static/media/solution-icon.svg": "/static/media/solution-icon.7573c77e934911cc53cf4c43a427c576.svg",
-    "index.html": "/index.html",
-    "main.95817aa5.js.map": "/static/js/main.95817aa5.js.map",
-    "453.b17c1d85.chunk.js.map": "/static/js/453.b17c1d85.chunk.js.map"
+    "main.js": "/micro-frontends-anti-patterns/static/js/main.13b8c3cb.js",
+    "static/js/453.b17c1d85.chunk.js": "/micro-frontends-anti-patterns/static/js/453.b17c1d85.chunk.js",
+    "static/media/hub-like-dependecy-example.png": "/micro-frontends-anti-patterns/static/media/hub-like-dependecy-example.79a36ef28f480ae94d4e.png",
+    "static/media/hub-like-dependecy-solution.png": "/micro-frontends-anti-patterns/static/media/hub-like-dependecy-solution.261ee7afb005021e99e0.png",
+    "static/media/old-header-logo.svg": "/micro-frontends-anti-patterns/static/media/old-header-logo.af471ca74a152728a167.svg",
+    "static/media/hub-like-dependecy-problem.png": "/micro-frontends-anti-patterns/static/media/hub-like-dependecy-problem.348a8aaba6f122087493.png",
+    "static/media/header-logo.svg": "/micro-frontends-anti-patterns/static/media/header-logo.d780e027bfcfa7e8a8c43a2f8ab1d342.svg",
+    "static/media/cyclic-dependecy-solution.png": "/micro-frontends-anti-patterns/static/media/cyclic-dependecy-solution.e5df6a41bade749c8542.png",
+    "static/media/cyclic-dependecy-problem.png": "/micro-frontends-anti-patterns/static/media/cyclic-dependecy-problem.2e45ee9e0d2b98a1e09e.png",
+    "static/media/search-not-found.svg": "/micro-frontends-anti-patterns/static/media/search-not-found.137e9f81daba30ea54d90542979249ec.svg",
+    "static/media/description-icon.svg": "/micro-frontends-anti-patterns/static/media/description-icon.477b973c4b54d362094542128809180f.svg",
+    "static/media/example-icon.svg": "/micro-frontends-anti-patterns/static/media/example-icon.5dc12e5b77a1051e6a18f1bdbb01ac58.svg",
+    "static/media/solution-icon.svg": "/micro-frontends-anti-patterns/static/media/solution-icon.7573c77e934911cc53cf4c43a427c576.svg",
+    "index.html": "/micro-frontends-anti-patterns/index.html",
+    "main.13b8c3cb.js.map": "/micro-frontends-anti-patterns/static/js/main.13b8c3cb.js.map",
+    "453.b17c1d85.chunk.js.map": "/micro-frontends-anti-patterns/static/js/453.b17c1d85.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.95817aa5.js"
+    "static/js/main.13b8c3cb.js"
   ]
 }
