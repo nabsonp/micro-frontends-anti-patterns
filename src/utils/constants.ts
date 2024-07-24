@@ -14,8 +14,20 @@ export enum FilterItemsEnum {
 }
 
 export const FilterProperties = {
-  'Inter-frontend': { color: 'tag1', hint: 'Inter frontend explication' },
-  'Intra-frontend': { color: 'tag2', hint: 'Intra frontend explication' },
-  Operation: { color: 'tag3', hint: 'Operation explication' },
-  Development: { color: 'tag4', hint: 'Development explication' },
+  'Inter-frontend': {
+    color: 'tag1',
+    hint: 'Considers the structural division and communication involving two or more MFEs.',
+  },
+  'Intra-frontend': {
+    color: 'tag2',
+    hint: 'Considers a single MFE component and its design.',
+  },
+  Operation: {
+    color: 'tag3',
+    hint: 'Related to the operational practices and continuous maintenance of the application.',
+  },
+  Development: {
+    color: 'tag4',
+    hint: 'Related to the development team and their decisions around the architecture.',
+  },
 };
