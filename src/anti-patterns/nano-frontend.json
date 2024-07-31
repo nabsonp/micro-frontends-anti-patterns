@@ -2,7 +2,7 @@
   "name": "Nano Frontend",
   "category": "Intra-frontend",
   "problem": {
-    "text": "The front end decomposes into numerous small MFEs with few screens or fragments. Small MFEs do not justify the cost of their maintenance. Furthermore, the presence of nano frontends can lead to issues of high coupling and the manifestation of other anti-patterns, such as cyclic dependency",
+    "text": "The frontend decomposes into numerous small MFEs with few screens or fragments. Small MFEs do not justify the cost of their maintenance. Furthermore, the presence of nano frontends can lead to issues of high coupling and the manifestation of other anti-patterns, such as cyclic dependency",
     "image": "",
     "description": ""
   },

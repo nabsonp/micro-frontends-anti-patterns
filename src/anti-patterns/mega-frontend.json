@@ -2,7 +2,7 @@
   "name": "Mega Frontend",
   "category": "Intra-frontend",
   "problem": {
-    "text": "Decomposing the architecture into a few MFEs encompassing numerous screens and fragments manifest this anti pattern. The MFE inherits the challenges of a monolithic frontend, such as difficulties in testing, slow builds and deployments, high coupling between its components, lack of modularity, and limited scalability.",
+    "text": "Decomposing the architecture into a few MFEs encompassing numerous screens and fragments manifest this anti-pattern. The MFE inherits the challenges of a monolithic frontend, such as difficulties in testing, slow builds and deployments, high coupling between its components, lack of modularity, and limited scalability.",
     "image": "",
     "description": ""
   },

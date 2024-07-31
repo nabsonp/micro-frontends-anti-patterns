@@ -12,7 +12,7 @@
       "description": ""
     },
   "solution": {
-      "text": "A practical solution to address the Knots is to implement domain-driven communication interfaces. These interfaces define a contract based on the domain model, specifying what data and functionalities each MFE needs to interact with others. This approach allows MFEs to understand the integration requirements without being concerned about the specific implementation details of data structures or internal logic within another MFE. Consider the scenario mentioned earlier: a Product entity encompasses various product types, and the payment screen relies on it. Instead of a context-specific interface tied to each product type, a domain-driven Product interface could be established. Adding new types of products wouldn't disrupt communication as long as they adhere to the core Product interface.",
+      "text": "A practical solution to address the Knots is to implement domain-driven communication interfaces. These interfaces define a contract based on the domain model, specifying what data and functionalities each MFE needs to interact with others. This approach allows MFEs to understand the integration requirements without being concerned about the specific implementation details of data structures or internal logic within another MFE. As new attributes emerge in new sub-domains, it is important to implement them in the interface such that they can be utilized by any other product, thereby maintaining their generalizability.",
       "image": "",
       "description": ""
     }
