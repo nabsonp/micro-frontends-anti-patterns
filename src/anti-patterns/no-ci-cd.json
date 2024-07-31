@@ -12,7 +12,7 @@
       "description": ""
     },
   "solution": {
-      "text": "Implement an automated and replicable CI/CD process that extends for new MFEs, ensuring they will have automated test execution and deployment consistently and efficiently. This should be part of the Definition of Done of the architecture.",
+      "text": "Implement an automated and replicable CI/CD process that extends for new MFEs, ensuring they will have automated test execution and deployment consistently and efficiently. This should be part of the Definition of Done (DoD) of the architecture.",
       "image": "",
       "description": ""
     }

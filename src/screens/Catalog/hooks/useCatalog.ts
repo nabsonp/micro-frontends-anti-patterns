@@ -18,7 +18,7 @@ const useCatalog = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = ` Micro Frontends Anti-patterns Catalog`;
+    document.title = `Micro Frontends Anti-patterns Catalog`;
   });
 
   useEffect(() => {

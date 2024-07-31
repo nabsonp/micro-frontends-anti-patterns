@@ -12,7 +12,7 @@
         "description": ""
       },
     "solution": {
-        "text": "High coupling between MFEs can be effectively mitigated by implementing event-based communication. This eliminates the need for direct communication between MFEs, replacing it with indirect interactions through a centralized event store. This pub-sub architecture promotes robust decoupling between MFEs, facilitating the integration of new MFEs without compromising the overall cohesion of the system.",
+        "text": "High coupling between MFEs can be effectively mitigated by implementing event-based communication. This eliminates the need for direct communication between MFEs, replacing it with indirect interactions through a centralized event store. The Pub-Sub pattern promotes robust decoupling between MFEs, facilitating the integration of new MFEs without compromising the overall cohesion of the system.",
         "image": "cyclic-dependecy-solution.png",
         "description": ""
       }

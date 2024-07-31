@@ -2,7 +2,7 @@
   "name": "Common Ownership",
   "category": "Development",
   "problem": {
-    "text": "A single team is tasked with managing all MFEs, which can occur either due to a lack of team division or when teams are segmented based on technical aspects such as data, front-end, and back-end. However, one of the key benefits of MFE architecture is independence, so adopting MFE Architecture without distinct teams to operate independently negates this advantage.",
+    "text": "A single team is tasked with managing all MFEs, which can occur either due to a lack of team division or when teams are segmented based on technical aspects such as data, frontend, and backend. However, one of the key benefits of MFE architecture is independence, so adopting MFE Architecture without distinct teams to operate independently negates this advantage.",
     "image": "",
     "description": ""
   },
