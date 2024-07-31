@@ -14,6 +14,7 @@ Follow the next steps to propose a new micro frontend anti-pattern to the catalo
    1. The image must be a PNG file added to the [/assets](./src//assets/) folder.
    1. Rename the file following the pattern `<anti-pattern-name>-[problem/solution/example].png`.
    1. Insert the file's name in the `image` field of the new anti-pattern file. You can also add a caption in the `description` field.
+1. Import and **export the new anti-pattern** file in [src/anti-patterns/index.ts](src/anti-patterns/index.ts).
 1. **Commit** your changes running `git commit -m "<message>"`.
     - The `<message>` must follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
 1. **Push** your changes to the remote branch running `git push origin your-branch-name`.
