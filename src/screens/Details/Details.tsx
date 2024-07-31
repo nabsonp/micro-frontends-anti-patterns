@@ -19,6 +19,7 @@ import {
   AntiPatternSectionImageTitle,
 } from './styles';
 import useDetails from './hooks/useDetails';
+import { SCREENS } from '../../utils/screens';
 
 const AntiPatternSection = ({
   antiPatternSection,
@@ -75,7 +76,7 @@ export function Details() {
           <PathHeaderText
             color="paragraph-text"
             cursor="pointer"
-            onClick={() => navigate(-1)}
+            onClick={() => navigate(SCREENS.CATALOG)}
           >
             Explore the Catalog
           </PathHeaderText>
@@ -99,7 +100,7 @@ export function Details() {
                 transform: 'scale(0.98)',
               }}
               cursor="pointer"
-              onClick={() => navigate(-1)}
+              onClick={() => navigate(SCREENS.CATALOG)}
             />
             <Text fontWeight={700} fontSize={'32px'}>
               {antiPatternsData.name}

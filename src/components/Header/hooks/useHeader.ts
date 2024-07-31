@@ -17,7 +17,7 @@ const useHeader = () => {
   const navigate = useNavigate();
 
   const navigateBack = () => {
-    if (pathname !== SCREENS.CATALOG) navigate(-1);
+    if (pathname !== SCREENS.CATALOG) navigate(SCREENS.CATALOG);
     else dispatch({ type: ACTIONS.CLEAR_FORM });
   };
 
