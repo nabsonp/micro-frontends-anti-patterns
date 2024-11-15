@@ -94,7 +94,7 @@ export const About = () => {
               <TextLink href="https://www.researchgate.net/profile/Nabson-Silva">
                 Tayana Conte
               </TextLink>
-              <Text>tayana.conte@icomp.ufam.edu.br</Text>
+              <Text>tayana@icomp.ufam.edu.br</Text>
             </Flex>
           </Flex>
         </Text>
