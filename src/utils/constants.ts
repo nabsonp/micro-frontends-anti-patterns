@@ -1,8 +1,7 @@
 export enum DrawerHeaderItemEnum {
   CATALOG = 'catalog',
   HOME = 'home',
-  ABOUT_CATALOG = 'about-catalog',
-  ABOUT_US = 'abaout-us',
+  ABOUT = 'info',
 }
 
 export enum FilterItemsEnum {

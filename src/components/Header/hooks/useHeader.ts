@@ -22,12 +22,17 @@ const useHeader = () => {
   };
 
   const items = useMemo(() => {
+    const about: TDrawerHeaderItems = {
+      key: DrawerHeaderItemEnum.ABOUT,
+      text: 'About the catalog',
+      path: SCREENS.ABOUT,
+    };
     const exploreTheCatalog: TDrawerHeaderItems = {
       key: DrawerHeaderItemEnum.CATALOG,
       text: 'Explore the Catalog',
       path: SCREENS.CATALOG,
     };
-    return [exploreTheCatalog];
+    return [exploreTheCatalog, about];
   }, [navigate]);
 
   return {
