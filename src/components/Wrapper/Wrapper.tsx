@@ -22,7 +22,7 @@ export function Wrapper() {
         </ListContainer>
       </WrapperContext.Provider>
       <Flex justifyContent="center" alignSelf="end">
-        <FooterText>Research | © 2024</FooterText>
+        <FooterText>Micro Frontends Anti-patterns Catalog | © 2024</FooterText>
       </Flex>
     </Box>
   );
