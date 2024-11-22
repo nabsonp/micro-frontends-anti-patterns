@@ -12,7 +12,7 @@
       "description": ""
     },
   "solution": {
-      "text": "A practical solution to address the Knots is to implement domain-driven communication interfaces. These interfaces define a contract based on the domain model, specifying what data and functionalities each MFE needs to interact with others. This approach allows MFEs to understand the integration requirements without being concerned about the specific implementation details of data structures or internal logic within another MFE. As new attributes emerge in new sub-domains, it is important to implement them in the interface such that they can be utilized by any other product, thereby maintaining their generalizability.",
+      "text": "A practical solution to address the problem of Knots is to implement domain--driven communication interfaces that are both generic and flexible. These interfaces should define a contract based on the domain model, specifying the essential fields required for each MFE to function correctly and interact with others. On designing new fields or attributes, it is essential to ensure their consistency, reusability, and minimizing tight coupling so other MFEs can utilize them. We recommend including a generic field in the interface containing a list of objects with standard properties such as label, value, and type, allowing each MFE to display data on the screen without needing to understand the specific meaning or context of the values. This approach reduces coupling between MFEs, while maintaining benefits such as modularity, scalability, and adaptability to new requirements.",
       "image": "",
       "description": ""
     }
