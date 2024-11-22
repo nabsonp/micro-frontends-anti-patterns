@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/micro-frontends-anti-patterns/static/js/main.1ee5a41c.js",
+    "main.js": "/micro-frontends-anti-patterns/static/js/main.8e3ef81d.js",
     "static/js/453.b17c1d85.chunk.js": "/micro-frontends-anti-patterns/static/js/453.b17c1d85.chunk.js",
     "static/media/tayana_conte.jpg": "/micro-frontends-anti-patterns/static/media/tayana_conte.10e29b587163adaac4f3.jpg",
     "static/media/hub-like-dependecy-example.png": "/micro-frontends-anti-patterns/static/media/hub-like-dependecy-example.79a36ef28f480ae94d4e.png",
@@ -19,10 +19,10 @@
     "static/media/example-icon.svg": "/micro-frontends-anti-patterns/static/media/example-icon.5dc12e5b77a1051e6a18f1bdbb01ac58.svg",
     "static/media/solution-icon.svg": "/micro-frontends-anti-patterns/static/media/solution-icon.7573c77e934911cc53cf4c43a427c576.svg",
     "index.html": "/micro-frontends-anti-patterns/index.html",
-    "main.1ee5a41c.js.map": "/micro-frontends-anti-patterns/static/js/main.1ee5a41c.js.map",
+    "main.8e3ef81d.js.map": "/micro-frontends-anti-patterns/static/js/main.8e3ef81d.js.map",
     "453.b17c1d85.chunk.js.map": "/micro-frontends-anti-patterns/static/js/453.b17c1d85.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.1ee5a41c.js"
+    "static/js/main.8e3ef81d.js"
   ]
 }
