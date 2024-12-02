@@ -53,8 +53,11 @@ export const About = () => {
         <SectionTitle>Related Papers</SectionTitle>
         <Text fontWeight={400} fontSize={'16px'} color={'paragraph-text'}>
           Silva, N., Rodrigues, E., Conte, T. (2025).{' '}
-          <b>A Catalog of Micro Frontends Anti–patterns</b>. In Proceedings of
-          the 47th International Conference on Software Engineering.
+          <b>A Catalog of Micro Frontends Anti–patterns</b>. arXiv preprint{' '}
+          <TextLink href="https://arxiv.org/abs/2411.19472">
+            arXiv:2411.19472
+          </TextLink>
+          .
         </Text>
       </Flex>
 
