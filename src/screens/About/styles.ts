@@ -23,6 +23,7 @@ export const ResearcherImage = styled(Image).attrs({
   marginBottom: '8px',
   borderRadius: '100%',
   width: '200px',
+  height: '200px',
 })``;
 
 export const SectionDivider = styled(Divider).attrs({
