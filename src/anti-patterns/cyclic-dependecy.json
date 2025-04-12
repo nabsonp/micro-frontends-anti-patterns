@@ -12,7 +12,7 @@
         "description": ""
       },
     "solution": {
-        "text": "High coupling between MFEs can be effectively mitigated through event-based communication, which removes the need for direct dependencies between MFEs. Instead, interactions are handled indirectly via a centralized event store. On implementing the Publish--Subscribe (Pub--Sub) pattern, an MFE can publish an event to the browser, allowing other MFEs to subscribe and respond when the event occurs. To ensure consistency and reduce errors, it is recommended to centralize event definitions in a shared library.",
+        "text": "High coupling between MFEs can be effectively mitigated through event-based communication, which removes the need for direct dependencies between MFEs. Instead, interactions are handled indirectly via a centralized event store. On implementing the Publish-Subscribe (Pub-Sub) pattern, an MFE can publish an event to the browser, allowing other MFEs to subscribe and respond when the event occurs. To ensure consistency and reduce errors, it is recommended to centralize event definitions in a shared library.",
         "image": "cyclic-dependecy-solution.png",
         "description": ""
       }
