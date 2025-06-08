@@ -2,6 +2,7 @@ export enum DrawerHeaderItemEnum {
   CATALOG = 'catalog',
   HOME = 'home',
   ABOUT = 'info',
+  BACKGROUND = 'background',
 }
 
 export enum FilterItemsEnum {

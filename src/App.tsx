@@ -8,6 +8,7 @@ import About from './screens/About';
 import Catalog from './screens/Catalog';
 import Details from './screens/Details';
 import { Wrapper } from './components/Wrapper/Wrapper';
+import Background from './screens/Background';
 
 const App: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const App: React.FC = () => {
             <Route path={SCREENS.ABOUT} element={<About />} />
             <Route path={SCREENS.CATALOG} element={<Catalog />} />
             <Route path={SCREENS.DETAILS} element={<Details />} />
+            <Route path={SCREENS.BACKGROUND} element={<Background />} />
           </Route>
         </Routes>
       </HashRouter>
