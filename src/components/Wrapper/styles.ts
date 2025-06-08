@@ -28,7 +28,7 @@ export const WitheCard = styled(Card).attrs({
   width: {
     base: '100%',
     md: '90%',
-    lg: '70%',
+    lg: '80%',
   },
   background: 'white',
   padding: '32px 24px',

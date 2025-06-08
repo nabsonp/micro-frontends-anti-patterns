@@ -32,7 +32,12 @@ const useHeader = () => {
       text: 'Explore the Catalog',
       path: SCREENS.CATALOG,
     };
-    return [exploreTheCatalog, about];
+    const microFrontends: TDrawerHeaderItems = {
+      key: DrawerHeaderItemEnum.BACKGROUND,
+      text: 'What are Micro Frontends?',
+      path: SCREENS.BACKGROUND,
+    };
+    return [exploreTheCatalog, about, microFrontends];
   }, [navigate]);
 
   return {

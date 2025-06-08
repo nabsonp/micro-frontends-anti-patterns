@@ -84,7 +84,7 @@ export const About = () => {
               <ResearcherImage
                 src={require('../../assets/researchers/eriky_rodrigues.jpg')}
               />
-              <TextLink href="https://www.researchgate.net/profile/Nabson-Silva">
+              <TextLink href="https://www.researchgate.net/profile/Eriky-Rodrigues">
                 Eriky Rodrigues
               </TextLink>
               <Text>eriky.rodrigues@icomp.ufam.edu.br</Text>
@@ -94,7 +94,7 @@ export const About = () => {
               <ResearcherImage
                 src={require('../../assets/researchers/tayana_conte.jpg')}
               />
-              <TextLink href="https://www.researchgate.net/profile/Nabson-Silva">
+              <TextLink href="https://www.researchgate.net/profile/Tayana-Conte">
                 Tayana Conte
               </TextLink>
               <Text>tayana@icomp.ufam.edu.br</Text>
