@@ -1,0 +1,31 @@
+{
+    "name": "Cyclic Dependency",
+    "alsoKnownAs": "",
+    "category": "Inter-frontend",
+    "problem": {
+      "text": "Two or more MFEs directly or indirectly depend on each other.",
+      "image": "cyclic-dependency-problem.png"
+    },
+    "symptomsAndConsequences": "High coupling between screens and fragments, compromising MFEs’ independence and modularity. Thus, changes in one MFE require coordination with the others. Circular dependencies lead to challenges in a system’s maintenance and evolution, compromising agility and the ability to scale developments efficiently.",
+    "solution": {
+      "text": "Implement event-based communication, which removes the need for direct dependencies between MFEs. Instead, interactions are handled indirectly via a centralized event store.",
+      "image": ""
+    },
+    "resultingContext": "On implementing the Publish-Subscribe (Pub-Sub) pattern, an MFE can publish an event to the browser, allowing other MFEs to subscribe and respond when the event occurs. To ensure consistency and reduce errors, it is recommended to centralize event definitions in a shared library.",
+    "example": {
+      "text": "Consider an e-commerce application featuring a product details screen implemented on mfe-products. The screen integrates three fragments: one displaying the shopping cart from 'mfe-checkout,' another showing product recommendations from 'mfe-recommender,' and a third calculating shipping costs based on the selected delivery address from 'mfe-delivery.' When a recommended product is added to the cart, 'mfe-recommender' notifies 'mfe-checkout,' which subsequently informs 'mfe-delivery' to recalculate the shipping costs. If the shipping address is updated, 'mfe-delivery' notifies all other MFEs to verify whether the products they display can be shipped to the new address; if not, those products are disabled. Adopting the Pub-Sub pattern, all components (screen or fragments) would dispatch events to the Event Store, which would notify only the components subscribed in the event.",
+      "image": "cyclic-dependency-example.png"
+    },
+    "notes": "The shared libraries must be carefully handled to avoid Dependency hell.",
+    "relatedAntiPatterns": [
+      {
+        "title": "Dependency hell"
+      }
+    ],
+    "references": [
+      {
+        "title": "A Catalog of Micro Frontends Anti-patterns",
+        "href": "10.1109/ICSE55347.2025.00079"
+      }
+    ]
+  }

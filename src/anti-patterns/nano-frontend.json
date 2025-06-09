@@ -1,19 +1,47 @@
 {
-  "name": "Nano Frontend",
-  "category": "Intra-frontend",
-  "problem": {
-    "text": "The frontend decomposes into numerous small MFEs with few screens or fragments. Small MFEs do not justify the cost of their maintenance. Furthermore, the presence of nano frontends can lead to issues of high coupling and the manifestation of other anti-patterns, such as cyclic dependency",
-    "image": "",
-    "description": ""
-  },
-  "example": {
-      "text": "In an e-commerce setting, separate MFEs implement the product listing and product details screens. Since both are part of the product context, their implementation should happen within a single MFE encompassing all product screens.",
-      "image": "",
-      "description": ""
+    "name": "Nano Frontend",
+    "alsoKnownAs": "Yin and Yang (Micro Frontends and Components), Micro Frontends Vs Components, Micro Frontends versus Components",
+    "category": "Intra-frontend",
+    "problem": {
+      "text": "A micro frontend is created with only a few screens or fragments.",
+      "image": ""
     },
-  "solution": {
-      "text": "The issue of nano frontends arises when the definition of boundaries is inadequately and excessively granular. Adhering to Domain-driven Design (DDD) principles is necessary to ensure an effective decomposition of MFEs. Therefore, the development team must work closely with the product team to gain a deep understanding of the domains and reflect them accurately in the architecture. To solve this issue, the architecture must be redesigned by grouping MFEs with the same domain is necessary. For minor variations within a domain, consider using templates or component libraries. This approach avoids creating a separate MFE for each slight variation, promoting efficiency and code reuse.",
-      "image": "",
-      "description": ""
-    }
-}
+    "symptomsAndConsequences": "This typically occurs when teams confuse micro frontends with UI components, resulting in fragmented and ineffective architectural decomposition.",
+    "solution": {
+      "text": "Define micro frontend boundaries based on business subdomains, following Domain-Driven Design principles. Avoid creating MFEs for isolated UI fragments or for purely technical reasons.",
+      "image": ""
+    },
+    "resultingContext": "The defined MFEs encapsulate cohesive sets of features aligned with domain-level concerns. Each MFE represents a meaningful subdomain within the organization. The development team must work closely with the product team to gain a deep understanding of the domains and reflect them accurately in the architecture. For minor variations within a domain, MFEs use templates or component libraries. This approach avoids creating a separate MFE for each slight variation, promoting efficiency and code reuse.",
+    "example": {
+      "text": "In a diagram editing platform, the UI is split into excessively granular micro frontends: one for the header menu and document actions (mfe-header), one for managing the shape objects (mfe-objects), another for the canvas where diagrams are drawn (mfe-drawer), one for styling and configuration options (mfe-style), and yet another for the footer navigation tabs (mfe-footer). Although these elements are all part of the same diagramming domain and operate in tight coordination, they are unnecessarily separated into fine-grained MFEs. This decomposition increases communication overhead, requires tight synchronization between teams, and makes UI maintenance more complex than necessary. By applying the solution, the architecture is redesigned to consolidate these micro frontends into a single domain-aligned MFE responsible for the diagramming experience while reusing internal components where variation is needed.",
+      "image": "nano-frontend-example.png"
+    },
+    "notes": "When redesigning nano frontends, be careful to not create Mega Frontends by merging unrelated MFEs.",
+    "relatedAntiPatterns": [
+      {
+        "title": "Micro Frontends Greedy"
+      },
+      {
+        "title": "Mega Frontend"
+      }
+    ],
+    "references": [
+      {
+        "title": "Microfrontends Anti-Patterns: Seven Years in the Trenches",
+        "href": "https://www.infoq.com/presentations/microfrontend-antipattern/"
+      },
+      {
+        "title": "4 Micro-Frontend Anti-Patterns",
+        "href": "https://levelup.gitconnected.com/four-micro-frontend-anti-patterns-58aaa9fe19d5"
+      },
+      {
+        "title": "Compositional Qualities of Microfrontends: The LdoD Archive",
+        "href": "https://fenix.tecnico.ulisboa.pt/downloadFile/281870113706102/49372-joao-raimundo.pdf"
+      },
+      {
+        "title": "A Catalog of Micro Frontends Anti-patterns",
+        "href": "10.1109/ICSE55347.2025.00079"
+      }
+    ]
+  }
+  

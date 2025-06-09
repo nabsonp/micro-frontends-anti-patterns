@@ -1,19 +1,34 @@
 {
   "name": "Knot Micro Frontend",
+  "alsoKnownAs": "",
   "category": "Inter-frontend",
   "problem": {
-    "text": "A Knot is composed of three or more MFEs whose communication with each other uses a context-specific interface. This means that navigation and data exchange between screens and fragments heavily depend on the unique context of each MFE involved. Adding new MFEs exacerbates the problem: as the number of MFEs grows, the interface complexity increases due to the introduction of new contexts creating a highly coupled Knot that becomes difficult to maintain and integrate new functionalities.",
-    "image": "",
-    "description": ""
+    "text": "Three or more micro frontends communicate directly using context-specific interfaces.",
+    "image": ""
   },
-  "example": {
-      "text": "Suppose an e-commerce system has MFEs for Digital Products (mfe-digital-products) and Payments (mfe-payments). The product details screen of mfe-digital-products navigates to the payment screen of mfe-payments, passing the product data as a parameter. At a later stage, a Physical Products MFE (mfe-physical-products) is implemented, including screens like delivery tracking, address listing, and address registration. For the unpaid physical products, a modification in the mfe-payments payment screen happens for receiving data of either digital or physical products. Later, adding new product types requires constantly adjusting the payment screen of mfe-payments to display the data for these products. Implementing a communication interface with the following fields would allow the addition of new products without requiring adaptations in mfe-payments. This interface definition must allow the transmission of product details in a uniform format for all types of products. Furthermore, it permits the optional transmission of delivery information and specifies whether delivery information can be provided.",
-      "image": "",
-      "description": ""
-    },
+  "symptomsAndConsequences": "The tight coupling between MFEs leads to brittle integrations, duplicated contract logic, and increased complexity when extending or replacing individual MFEs. The lack of a shared communication protocol prevents scalability and maintainability.",
   "solution": {
-      "text": "A practical solution to address the problem of Knots is to implement domain--driven communication interfaces that are both generic and flexible. These interfaces should define a contract based on the domain model, specifying the essential fields required for each MFE to function correctly and interact with others. On designing new fields or attributes, it is essential to ensure their consistency, reusability, and minimizing tight coupling so other MFEs can utilize them. We recommend including a generic field in the interface containing a list of objects with standard properties such as label, value, and type, allowing each MFE to display data on the screen without needing to understand the specific meaning or context of the values. This approach reduces coupling between MFEs, while maintaining benefits such as modularity, scalability, and adaptability to new requirements.",
-      "image": "",
-      "description": ""
+    "text": "Implement a domain-driven communication interface that is both generic and flexible. Define essential shared fields required for interoperability while allowing each MFE to include context-specific data through a structured, extensible payload (e.g., a generic field containing a list of typed objects).",
+    "image": ""
+  },
+  "resultingContext": "Implementing generic interfaces reduces coupling and enables each MFE to evolve independently while still supporting collaboration across the architecture.",
+  "example": {
+    "text": "Suppose an e-commerce system has MFEs for Digital Products (mfe-digital-products) and Payments (mfe-payments). The payment screen of mfe-payments receives the digital product data as a parameter. At a later stage, a Physical Products MFE (mfe-physical-products) is implemented, so developers add physical product-specific attributes to the payment screen to allow digital or physical product payment. Later, adding new product types requires constantly adding attributes specific to each product type to the payment screen, so it becomes a highly coupled knot.",
+    "image": "knot-micro-frontend-example.png"
+  },
+  "notes": "This anti-pattern is a case of the Spaghetti Architecture.",
+  "relatedAntiPatterns": [
+    {
+      "title": "Spaghetti Architecture"
+    },
+    {
+      "title": "Dependent deployment"
     }
+  ],
+  "references": [
+    {
+      "title": "A Catalog of Micro Frontends Anti-patterns",
+      "href": "10.1109/ICSE55347.2025.00079"
+    }
+  ]
 }

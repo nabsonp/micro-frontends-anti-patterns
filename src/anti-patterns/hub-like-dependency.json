@@ -1,0 +1,36 @@
+{
+    "name": "Hub-like Dependency",
+    "alsoKnownAs": "Tight coupling",
+    "category": "Inter-frontend",
+    "problem": {
+      "text": "A screen of a MFE integrates fragments from several other MFEs, becoming a central point of interdependence.",
+      "image": "hub-like-dependency-problem.png"
+    },
+    "symptomsAndConsequences": "Any issue occurring in the main screen or one of its fragments can affect all other fragments present on it.",
+    "solution": {
+      "text": "The screen should be kept as simple as possible, and each fragment should implement robust error handling mechanisms.",
+      "image": ""
+    },
+    "resultingContext": "Implementing a strategy where uncaught errors within a fragment gracefully degrade its functionality, displaying a user-friendly fallback message.",
+    "example": {
+      "text": "Consider a digital banking system where the main screen is an MFE that integrates several fragments from other MFEs, such as an investment list, a chart showing bitcoin value variations, account balance, and credit card statement amount. This structure introduces a significant vulnerability: a single faulty fragment can potentially disrupt the entire main screen. To avoid it, all fragments must display a fallback message if unavailable and not raise the error to the screen.",
+      "image": "hub-like-dependency-example.png"
+    },
+    "notes": "Be sure that the components are well defined and do not fall into the Nano Frontend Anti-pattern.",
+    "relatedAntiPatterns": [
+      {
+        "title": "Nano Frontend"
+      }
+    ],
+    "references": [
+      {
+        "title": "Chapter 4. Discovering Micro-Frontend Architectures",
+        "href": "https://www.oreilly.com/library/view/building-micro-frontends/9781492082989/ch04.html"
+      },
+      {
+        "title": "A Catalog of Micro Frontends Anti-patterns",
+        "href": "10.1109/ICSE55347.2025.00079"
+      }
+    ]
+  }
+  
