@@ -1,28 +1,35 @@
 {
   "files": {
-    "main.js": "/micro-frontends-anti-patterns/static/js/main.4cb55785.js",
+    "main.js": "/micro-frontends-anti-patterns/static/js/main.98703055.js",
     "static/js/453.b17c1d85.chunk.js": "/micro-frontends-anti-patterns/static/js/453.b17c1d85.chunk.js",
+    "static/media/unmediated-legacy-integration-example.png": "/micro-frontends-anti-patterns/static/media/unmediated-legacy-integration-example.417687c60a4f3d0b24e6.png",
+    "static/media/access-to-different-domains-example.png": "/micro-frontends-anti-patterns/static/media/access-to-different-domains-example.c2c29d77f53970b0e04c.png",
+    "static/media/knot-micro-frontend-example.png": "/micro-frontends-anti-patterns/static/media/knot-micro-frontend-example.152bfa9e9f518939abfe.png",
     "static/media/tayana_conte.jpg": "/micro-frontends-anti-patterns/static/media/tayana_conte.79023c09ae80c8702bdf.jpg",
-    "static/media/hub-like-dependecy-example.png": "/micro-frontends-anti-patterns/static/media/hub-like-dependecy-example.79a36ef28f480ae94d4e.png",
-    "static/media/hub-like-dependecy-solution.png": "/micro-frontends-anti-patterns/static/media/hub-like-dependecy-solution.261ee7afb005021e99e0.png",
+    "static/media/nano-frontend-example.png": "/micro-frontends-anti-patterns/static/media/nano-frontend-example.4ad3f6fe21b75887e38e.png",
+    "static/media/common-ownership-solution.png": "/micro-frontends-anti-patterns/static/media/common-ownership-solution.e7889a9548bc60520230.png",
+    "static/media/avoiding-obersavility-example.png": "/micro-frontends-anti-patterns/static/media/avoiding-obersavility-example.738bdf72313e0c71b2d8.png",
+    "static/media/hub-like-dependency-example.png": "/micro-frontends-anti-patterns/static/media/hub-like-dependency-example.261ee7afb005021e99e0.png",
+    "static/media/no-ci-cd-example.png": "/micro-frontends-anti-patterns/static/media/no-ci-cd-example.5e5e26f83bb14ea99c1a.png",
+    "static/media/mega-frontend-example.png": "/micro-frontends-anti-patterns/static/media/mega-frontend-example.3d851077514259392786.png",
     "static/media/old-header-logo.svg": "/micro-frontends-anti-patterns/static/media/old-header-logo.af471ca74a152728a167.svg",
     "static/media/nabson-silva.jpeg": "/micro-frontends-anti-patterns/static/media/nabson-silva.d160ff1228c771681723.jpeg",
     "static/media/eriky_rodrigues.jpg": "/micro-frontends-anti-patterns/static/media/eriky_rodrigues.bbfdbdfba5e6dc57c770.jpg",
+    "static/media/one-micro-frontend-for-all-example.png": "/micro-frontends-anti-patterns/static/media/one-micro-frontend-for-all-example.b224c0768cba2aa77633.png",
+    "static/media/dependency-hell-example.png": "/micro-frontends-anti-patterns/static/media/dependency-hell-example.dc12a9af6ac1c50bec06.png",
     "static/media/ufam.jpg": "/micro-frontends-anti-patterns/static/media/ufam.32086abc8fe1c9ac66c7.jpg",
-    "static/media/hub-like-dependecy-problem.png": "/micro-frontends-anti-patterns/static/media/hub-like-dependecy-problem.348a8aaba6f122087493.png",
+    "static/media/bidirectional-data-flow-example.png": "/micro-frontends-anti-patterns/static/media/bidirectional-data-flow-example.cc396caeda0a04514671.png",
+    "static/media/hub-like-dependency-problem.png": "/micro-frontends-anti-patterns/static/media/hub-like-dependency-problem.348a8aaba6f122087493.png",
     "static/media/super.jpg": "/micro-frontends-anti-patterns/static/media/super.84d6ea2627706d4b47a7.jpg",
     "static/media/header-logo.svg": "/micro-frontends-anti-patterns/static/media/header-logo.d780e027bfcfa7e8a8c43a2f8ab1d342.svg",
-    "static/media/cyclic-dependecy-solution.png": "/micro-frontends-anti-patterns/static/media/cyclic-dependecy-solution.e5df6a41bade749c8542.png",
-    "static/media/cyclic-dependecy-problem.png": "/micro-frontends-anti-patterns/static/media/cyclic-dependecy-problem.2e45ee9e0d2b98a1e09e.png",
+    "static/media/cyclic-dependency-example.png": "/micro-frontends-anti-patterns/static/media/cyclic-dependency-example.e5df6a41bade749c8542.png",
+    "static/media/cyclic-dependency-problem.png": "/micro-frontends-anti-patterns/static/media/cyclic-dependency-problem.2e45ee9e0d2b98a1e09e.png",
     "static/media/search-not-found.svg": "/micro-frontends-anti-patterns/static/media/search-not-found.137e9f81daba30ea54d90542979249ec.svg",
-    "static/media/description-icon.svg": "/micro-frontends-anti-patterns/static/media/description-icon.477b973c4b54d362094542128809180f.svg",
-    "static/media/example-icon.svg": "/micro-frontends-anti-patterns/static/media/example-icon.5dc12e5b77a1051e6a18f1bdbb01ac58.svg",
-    "static/media/solution-icon.svg": "/micro-frontends-anti-patterns/static/media/solution-icon.7573c77e934911cc53cf4c43a427c576.svg",
     "index.html": "/micro-frontends-anti-patterns/index.html",
-    "main.4cb55785.js.map": "/micro-frontends-anti-patterns/static/js/main.4cb55785.js.map",
+    "main.98703055.js.map": "/micro-frontends-anti-patterns/static/js/main.98703055.js.map",
     "453.b17c1d85.chunk.js.map": "/micro-frontends-anti-patterns/static/js/453.b17c1d85.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.4cb55785.js"
+    "static/js/main.98703055.js"
   ]
 }
