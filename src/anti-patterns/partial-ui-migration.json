@@ -1,0 +1,32 @@
+{
+    "name": "Partial UI Migration",
+    "alsoKnownAs": "Bye Bye Big Bang - Iterative Deployment",
+    "category": "Inter-frontend",
+    "problem": {
+      "text": "Extracting a portion of the UI to create a micro frontend and embedding it back into the legacy monolith.",
+      "image": ""
+    },
+    "symptomsAndConsequences": "It often slows down the system and provides no real benefit from adopting micro frontends.",
+    "solution": {
+      "text": "Follow a path-based migration strategy, which allows gradual migration of frontend segments by switching versions through URL base paths.",
+      "image": ""
+    },
+    "resultingContext": "This enables progressive adoption of micro frontends without entangling them with the monolith.",
+    "example": {
+      "text": "In an e-commerce platform, the development team begins migrating the checkout process to a new micro frontend but embeds it inside the legacy monolithic frontend using an iframe. Although technically the checkout is now isolated, every time the monolith renders the checkout page, it loads both the heavy legacy app and the micro frontend, causing performance degradation and offering little of the true independence or scalability benefits promised by micro frontends. By applying the solution, the team switches to a path-based migration strategy, routing /checkout directly to the new micro frontend via a separate deployment, while the monolith continues serving other routes like /home and /products, enabling gradual migration without tightly coupling the systems.",
+      "image": ""
+    },
+    "notes": "",
+    "relatedAntiPatterns": [
+      {
+        "title": "Unmediated Legacy Integration"
+      }
+    ],
+    "references": [
+      {
+        "title": "Micro-Frontends anti-patterns by Luca Mezzalira (#GSAS24)",
+        "href": "https://www.youtube.com/watch?v=3jygY3LGTKc&ab_channel=Apiumhub"
+      }
+    ]
+  }
+  

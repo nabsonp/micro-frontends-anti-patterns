@@ -1,19 +1,32 @@
 {
-  "name": "Lack of skeleton",
-  "category": "Operations",
-  "problem": {
-    "text": "No skeleton or predefined boilerplate is available as a base for creating new MFEs. This leads to the creation of MFEs from scratch or based on an existing MFE and inheriting its issues. The consequences include wasted time, increased risk of errors, duplicated code across MFEs, and a need for more standardization in development.",
-    "image": "",
-    "description": ""
-  },
-  "example": {
-      "text": "At the beginning of a specific system development, the developers create an MFE from scratch without adhering to a specific pattern. The second MFE is developed by copying files and code blocks from the first, changing specific parts. The exact process happens when creating new MFEs. Then, a diverse set of MFEs emerges, which hampers the establishment of automated pipelines, fosters code duplication, and complicates developer interchange between teams.",
-      "image": "",
-      "description": ""
+    "name": "Lack of Skeleton",
+    "alsoKnownAs": "",
+    "category": "Operations",
+    "problem": {
+      "text": "No skeleton or predefined boilerplate is available as a base for creating new micro frontends.",
+      "image": ""
     },
-  "solution": {
-      "text": "Whenever a new technology is used to implement a MFE, the development team must create a repository containing the necessary base code, known as a boilerplate. The boilerplate should enable the creation of new MFEs with the same technology by simply cloning it. Keeping the boilerplate updated with new design patterns and library versions is crucial. Additionally, the development team should create comprehensive documentation detailing the entire process of creating a new MFE, regardless of the technology. This documentation should provide instructions on adding automated CI/CD, integrating the MFE into the existing system, and addressing other relevant aspects.",
-      "image": "",
-      "description": ""
-    }
-}
+    "symptomsAndConsequences": "This leads to inconsistencies across projects, repeated setup work, and increased onboarding time for new team members.",
+    "solution": {
+      "text": "Whenever a new technology is adopted for implementing a micro frontend, the development team should create a boilerplate repository containing the necessary base code. In addition, maintain comprehensive documentation that outlines every step required to create a new MFE, regardless of the technology stack.",
+      "image": ""
+    },
+    "resultingContext": "The skeleton promotes consistency, reduces setup time, and accelerates adoption across teams. Developers can create new MFE based on a documentation with instructions for cloning the skeleton repository, configuring CI/CD pipelines, setting up monitoring tools, applying required design patterns during development, and other relevant guidelines.",
+    "example": {
+      "text": "At the beginning of a specific system development, the developers create an MFE from scratch without adhering to a specific pattern. The second MFE is developed by copying files and code blocks from the first, changing specific parts. The exact process happens when creating new MFEs. Then, a diverse set of MFEs emerges, which hampers the establishment of automated pipelines, fosters code duplication, and complicates developer interchange between teams.",
+      "image": ""
+    },
+    "notes": "",
+    "relatedAntiPatterns": [
+      {
+        "title": "No CI&CD"
+      }
+    ],
+    "references": [
+      {
+        "title": "A Catalog of Micro Frontends Anti-patterns",
+        "href": "10.1109/ICSE55347.2025.00079"
+      }
+    ]
+  }
+  

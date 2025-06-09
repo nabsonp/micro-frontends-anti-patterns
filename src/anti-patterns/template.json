@@ -1,19 +1,32 @@
 {
-  "name": "",
-  "category": "",
-  "problem": {
-    "text": "",
-    "image": "",
-    "description": ""
-  },
-  "example": {
+    "name": "",
+    "alsoKnownAs": "",
+    "category": "",
+    "problem": {
       "text": "",
-      "image": "",
-      "description": ""
+      "image": ""
     },
-  "solution": {
+    "symptomsAndConsequences": "",
+    "solution": {
       "text": "",
-      "image": "",
-      "description": ""
-    }
-}
+      "image": ""
+    },
+    "resultingContext": "",
+    "example": {
+      "text": "",
+      "image": ""
+    },
+    "notes": "",
+    "relatedAntiPatterns": [
+      {
+        "title": ""
+      }
+    ],
+    "references": [
+      {
+        "title": "",
+        "href": ""
+      }
+    ]
+  }
+  

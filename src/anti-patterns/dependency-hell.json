@@ -1,0 +1,44 @@
+{
+    "name": "Dependency hell",
+    "alsoKnownAs": "The Dependencies Hell; Poor Dependency Management in Micro Frontends.",
+    "category": "Inter-frontend",
+    "problem": {
+      "text": "Micro frontends share external libraries without consistent dependency management.",
+      "image": ""
+    },
+    "symptomsAndConsequences": "Version mismatches, compatibility issues, and broken functionality. These problems are amplified when teams extend shared libraries to meet specific needs of individual MFEs, resulting in forks or diverging implementations that no longer align with the original library.",
+    "solution": {
+      "text": "Adopt clear and consistent strategies for managing shared dependencies in distributed frontend architectures. Use techniques such as import maps, module federation, or even share-nothing approaches when appropriate.",
+      "image": ""
+    },
+    "resultingContext": "All MFEs use the same versions of shared libraries to avoid extending core libraries for specific use cases—instead, favoring composition over extension. External dependencies are wrapped in internal abstractions to reduce tight coupling and minimize the risk of breakage. Modular and well-separated libraries are created, and version control, integration, and testing are automated to detect divergence early and maintain alignment across teams.",
+    "example": {
+      "text": "Consider all micro frontends initially relying on a core library at version 1.1.0. Later, the library released version 1.2.0, which included new features. One micro frontend (MFE-A) wants to adopt these features and upgrades to the new version. At the same time, another micro frontend (MFE-B) extends the core library by adding custom code on top of it. When the core library eventually releases a major update (version 2.1.0), the extension built by MFE-B breaks, creating conflicts and forcing the team to maintain a separate, extended version of the library. To avoid this type of dependency hell, teams should decouple feature extensions from core libraries by using internal wrappers that isolate custom functionality from the base library. Additionally, it is crucial to ensure that all micro frontends utilize consistent versions of shared libraries, employing centralized dependency management strategies to maintain alignment across the system.",
+      "image": "dependency-hell-example.png"
+    },
+    "notes": "Be careful using wrappers to change components locally because it can lead to UI inconsistency. Always try to keep the same dependencies between all MFEs.",
+    "relatedAntiPatterns": [
+      {
+        "title": "No CI&CD"
+      }
+    ],
+    "references": [
+      {
+        "title": "Microfrontends Anti-Patterns: Seven Years in the Trenches",
+        "href": "https://www.infoq.com/presentations/microfrontend-antipattern/"
+      },
+      {
+        "title": "4 Micro-Frontend Anti-Patterns",
+        "href": "https://levelup.gitconnected.com/four-micro-frontend-anti-patterns-58aaa9fe19d5"
+      },
+      {
+        "title": "Understanding and implementing microfrontends on AWS: AWS Prescriptive Guidance",
+        "href": "https://docs.aws.amazon.com/pdfs/prescriptive-guidance/latest/micro-frontends-aws/micro-frontends-aws.pdf"
+      },
+      {
+        "title": "Compositional Qualities of Microfrontends: The LdoD Archive",
+        "href": "https://fenix.tecnico.ulisboa.pt/downloadFile/281870113706102/49372-joao-raimundo.pdf"
+      }
+    ]
+  }
+  

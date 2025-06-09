@@ -1,0 +1,36 @@
+{
+    "name": "Unmediated Legacy Integration",
+    "alsoKnownAs": "The Swiss Army Knife, Integration Bottleneck Anti-pattern",
+    "category": "Inter-frontend",
+    "problem": {
+      "text": "Integrating a legacy system into a micro frontend architecture without proper isolation often leads to architectural misalignment and increased complexity.",
+      "image": ""
+    },
+    "symptomsAndConsequences": "Legacy systems may use incompatible technologies or communication mechanisms that do not fit the micro frontend model. A common mistake is to modify or extend the main integration layer of the application to accommodate these differences, introducing tight coupling, pollution of domain boundaries, and long-term maintainability issues.",
+    "solution": {
+      "text": "Introduce an Anti-Corruption Layer (ACL) between the micro frontend application and the legacy system. This layer acts as a translator, isolating the legacy system and ensuring that its communication model and domain concepts do not leak into the modern architecture.",
+      "image": ""
+    },
+    "resultingContext": "By encapsulating the integration logic in a dedicated boundary, teams can preserve the integrity of the micro frontend system without modifying its core integration layer.",
+    "example": {
+      "text": "In a retail platform migrating to micro frontends, the team needs to integrate a legacy UI module responsible for managing product promotions, built years ago using jQuery and global JavaScript variables. Instead of isolating this legacy module, the developers directly import its scripts into the new React-based micro frontend container and wire up shared states and callbacks, causing tight coupling, polluting the modern architecture with outdated patterns, and increasing the risk of breaking the entire system with any legacy update. By applying the solution, the team wraps the jQuery-based promotion module inside an Anti-Corruption Layer (ACL) component, which handles mounting, unmounting, and communication through well-defined events or props, ensuring the legacy logic stays isolated and the modern React micro frontends remain clean, maintainable, and decoupled.",
+      "image": "unmediated-legacy-integration-example.png"
+    },
+    "notes": "",
+    "relatedAntiPatterns": [
+      {
+        "title": "Partial UI Migration"
+      }
+    ],
+    "references": [
+      {
+        "title": "Microfrontends Anti-Patterns: Seven Years in the Trenches",
+        "href": "https://www.infoq.com/presentations/microfrontend-antipattern/"
+      },
+      {
+        "title": "Compositional Qualities of Microfrontends: The LdoD Archive",
+        "href": "https://fenix.tecnico.ulisboa.pt/downloadFile/281870113706102/49372-joao-raimundo.pdf"
+      }
+    ]
+  }
+  

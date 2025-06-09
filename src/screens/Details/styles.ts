@@ -1,4 +1,5 @@
-import { Flex, Image, SimpleGrid, Tag, Text } from '@chakra-ui/react';
+import { Flex, Image, Link, SimpleGrid, Tag, Text } from '@chakra-ui/react';
+import { Link as LinkDom } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderContainer = styled(Flex).attrs({
@@ -37,17 +38,30 @@ export const AntiPatternSectionContainer = styled(SimpleGrid).attrs({
 
 export const AntiPatternSectionDescription = styled(Text).attrs({
   fontWeight: 400,
-  fontSize: '14px',
-  color: 'paragraph-text',
-  marginTop: '16px',
-})``;
-
-export const AntiPatternSectionImageDescription = styled(Text).attrs({
-  fontWeight: 400,
-  fontSize: '12px',
+  fontSize: '16px',
   color: 'paragraph-text',
   marginTop: '8px',
 })``;
+
+export const AntiPatternSectionLink = styled(Link).attrs({
+  fontWeight: 400,
+  fontSize: '16px',
+  color: 'primary',
+  marginTop: '8px',
+})``;
+
+export const RelatedAntiPatternLink = styled(LinkDom)`
+  font-weight: 400;
+  font-size: 16px;
+  color: var(
+    --chakra-colors-primary,
+    #3182ce
+  ); // Ajuste para sua cor do tema se necessário
+  margin-top: 8px;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 
 export const AntiPatternsSectionImageContainer = styled(Flex).attrs({
   flexDirection: 'column',
@@ -57,8 +71,7 @@ export const AntiPatternsSectionImageContainer = styled(Flex).attrs({
 })``;
 
 export const AntiPatternsSectionImage = styled(Image).attrs({
-  height: '207px',
-  width: '480px',
+  width: '90%',
   borderRadius: '12px',
 })``;
 

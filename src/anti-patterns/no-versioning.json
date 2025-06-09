@@ -1,19 +1,32 @@
 {
-  "name": "No Versioning",
-  "category": "Operations",
-  "problem": {
-    "text": "The MFEs are not versioned. Small and large changes can impact the integration between different MFEs and cause errors. Consequently, the MFEs become less independent, requiring coordinated deployments.",
-    "image": "",
-    "description": ""
-  },
-  "example": {
-      "text": "Consider a payment confirmation page with a fragment for calculating shipping costs. Whenever the user inputs shipping information into the fragment, the system generates a delivery charge and adds it to the total purchase amount displayed on the screen. Suppose the delivery charge's return value format changes and the fragment is not versioned. The delivery charge will not be added to the total purchase amount, potentially resulting in a display error or even mistakenly free deliveries. However, if the fragment is versioned, the screen will not be affected by the format change, as it will continue to use the previous version of the fragment and can be updated later when necessary.",
-      "image": "",
-      "description": ""
+    "name": "No Versioning",
+    "alsoKnownAs": "",
+    "category": "Operations",
+    "problem": {
+      "text": "Micro frontends are not versioned.",
+      "image": ""
     },
-  "solution": {
-      "text": "Adopting a versioning approach like Semantic Versioning is essential to ensure that changes do not impact functioning versions. For example, consider a fragment that is used in screens across different MFEs in a client-side rendering scenario. Without versioning, any change to the fragment's parameters or return values could break the interaction on all the screens it integrates with. However, with versioning, such updates would not impact the current versions used by other MFEs, as they can continue to request the previous version of the fragment and update at their convenience. This approach helps maintain a stable environment and minimizes disruptions caused by updates.",
-      "image": "",
-      "description": ""
-    }
-}
+    "symptomsAndConsequences": "Without proper version control, changes in one MFE can inadvertently affect others, leading to instability, incompatibility between components, and difficulties in rollback or maintenance.",
+    "solution": {
+      "text": "Adopt a clear versioning strategy, such as Semantic Versioning, to track and communicate changes effectively.",
+      "image": ""
+    },
+    "resultingContext": "Versioning ensures that updates are predictable and that existing versions continue to function without disruption, enabling safe evolution and better coordination across teams.",
+    "example": {
+      "text": "Consider a payment confirmation page with a fragment for calculating shipping costs. Whenever the user inputs shipping information into the fragment, the system generates a delivery charge and adds it to the total purchase amount displayed on the screen. Suppose the delivery charge’s return value format changes and the fragment is not versioned. The delivery charge will not be added to the total purchase amount, potentially resulting in a display error or even mistakenly free deliveries. However, if the fragment is versioned, the screen will not be affected by the format change, as it will continue to use the previous version of the fragment and can be updated later when necessary.",
+      "image": ""
+    },
+    "notes": "",
+    "relatedAntiPatterns": [
+      {
+        "title": "Spaghetti Architecture"
+      }
+    ],
+    "references": [
+      {
+        "title": "A Catalog of Micro Frontends Anti-patterns",
+        "href": ""
+      }
+    ]
+  }
+  

@@ -1,19 +1,30 @@
 {
-  "name": "Micro Frontend as the goal",
-  "category": "Development",
-  "problem": {
-    "text": "Adopting the MFE architecture in inappropriate contexts can lead to more issues than benefits, especially in systems with few screens and low complexity or in companies lacking a sufficient number of developers to create dedicated teams for different application domains. In such situations, the maintenance costs of the architecture may outweigh the expected benefits, making its implementation unfeasible.",
-    "image": "",
-    "description": ""
-  },
-  "example": {
-      "text": "A personal notes application is divided into the notes and user domains, each comprising its own MFE. The notes domain contains functionalities for note management, containing operations such as listing, creating, editing, and deleting notes. The user's domain encompasses login, registration, and profile management functionalities. In this context, using MFEs results in unnecessary maintenance and development challenges due to the low volume of screens and the low probability of increasing complexity in the application. Adopting a monolithic frontend is a suitable option.",
-      "image": "",
-      "description": ""
+    "name": "Micro Frontend as the goal",
+    "alsoKnownAs": "",
+    "category": "Development",
+    "problem": {
+      "text": "Adopting the MFE architecture in inappropriate contexts.",
+      "image": ""
     },
-  "solution": {
-      "text": "Software teams must consider carefully different aspects of adopting MFE architecture. Considering the system's complexity, the feasibility of maintaining automated CI/CD pipelines and the team's restructuring according to different domains is necessary.",
-      "image": "",
-      "description": ""
-    }
-}
+    "symptomsAndConsequences": "Can lead to more issues than benefits, especially in systems with few screens and low complexity or in companies lacking a sufficient number of developers to create dedicated teams for different application domains. In such situations, the maintenance costs of the architecture may outweigh the expected benefits, making its implementation unfeasible.",
+    "solution": {
+      "text": "Software teams must consider carefully different aspects of adopting MFE architecture. Considering the system’s complexity, the feasibility of maintaining automated CI/CD pipelines and the team’s restructuring according to different domains is necessary.",
+      "image": ""
+    },
+    "resultingContext": "Adoption of MFE only when feasible.",
+    "example": {
+      "text": "A personal notes application is divided into the notes and user domains, each comprising its own MFE. The notes domain contains functionalities for note management, containing operations such as listing, creating, editing, and deleting notes. The user’s domain encompasses login, registration, and profile management functionalities. In this context, using MFEs results in unnecessary maintenance and development challenges due to the low volume of screens and the low probability of increasing complexity in the application. Adopting a monolithic frontend is a suitable option.",
+      "image": ""
+    },
+    "notes": "",
+    "relatedAntiPatterns": [{
+      "title": "No CI&CD"
+    }],
+    "references": [
+      {
+        "title": "A Catalog of Micro Frontends Anti-patterns",
+        "href": "10.1109/ICSE55347.2025.00079"
+      }
+    ]
+  }
+  

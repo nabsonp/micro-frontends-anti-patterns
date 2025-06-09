@@ -1,19 +1,32 @@
 {
-  "name": "No CI&CD",
-  "category": "Operations",
-  "problem": {
-    "text": "The company lacks an automated Continuous Integration (CI) and Continuous Delivery (CD) pipeline, so developers must manually execute tests and perform deployments. This manual process becomes burdensome, especially with the potential existence of multiple MFEs. It increases development time, reduces productivity, and raises the risk of errors in the production environment.",
-    "image": "",
-    "description": ""
-  },
-  "example": {
-      "text": "Upon releasing a new system version, a developer must conduct manual tests and ensure all unit tests pass. However, developers may skip the tests and manually deploy the changes without realizing some tests are failing, introducing bugs, which is avoidable with an automated CI pipeline. Even if the tests pass, there is still a risk of making mistakes during deployment, which could render the system unavailable. Automating the deployment process with CD ensures correct and consistent execution.",
-      "image": "",
-      "description": ""
+    "name": "No CI&CD",
+    "alsoKnownAs": "",
+    "category": "Operations",
+    "problem": {
+      "text": "The company lacks an automated Continuous Integration (CI) and Continuous Delivery (CD) pipeline, so developers must manually execute tests and perform deployments.",
+      "image": ""
     },
-  "solution": {
+    "symptomsAndConsequences": "This manual process becomes burdensome, especially with the potential existence of multiple MFEs. It increases development time, reduces productivity, and raises the risk of errors in the production environment.",
+    "solution": {
       "text": "Implement an automated and replicable CI/CD process that extends for new MFEs, ensuring they will have automated test execution and deployment consistently and efficiently. This should be part of the Definition of Done (DoD) of the architecture.",
-      "image": "",
-      "description": ""
-    }
-}
+      "image": ""
+    },
+    "resultingContext": "Updated MFEs always trigger CI pipelines to run tests and the deployment of them is made automatically by the CD pipeline, which eases the maintenance and evolution of the MFEs.",
+    "example": {
+      "text": "Upon releasing a new system version, a developer must conduct manual tests and ensure all unit tests pass. However, developers may skip the tests and manually deploy the changes without realizing some tests are failing, introducing bugs, which is avoidable with an automated CI pipeline. Even if the tests pass, there is still a risk of making mistakes during deployment, which could render the system unavailable. Automating the deployment process with CD ensures correct and consistent execution.",
+      "image": "no-ci-cd-example.png"
+    },
+    "notes": "Make sure to document how to implement the CI/CD pipelines to new MFEs according to the solution of the Lack of Skeleton Anti-pattern.",
+    "relatedAntiPatterns": [
+      {
+        "title": "Lack of Skeleton"
+      }
+    ],
+    "references": [
+      {
+        "title": "A Catalog of Micro Frontends Anti-patterns",
+        "href": "10.1109/ICSE55347.2025.00079"
+      }
+    ]
+  }
+  

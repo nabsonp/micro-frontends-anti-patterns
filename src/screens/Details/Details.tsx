@@ -1,15 +1,21 @@
 import React from 'react';
-import { Divider, Flex, Image, Text, Tooltip } from '@chakra-ui/react';
+import { Divider, Flex, Text, Tooltip } from '@chakra-ui/react';
 import { ArrowBackIcon, InfoIcon } from '@chakra-ui/icons';
 import { FilterProperties } from '../../utils/constants';
-import ExampleIcon from '../../assets/example-icon.svg';
-import DescriptionIcon from '../../assets/description-icon.svg';
-import SolutionIcon from '../../assets/solution-icon.svg';
+import { Icon } from '@chakra-ui/react';
+import { LuCircleAlert } from 'react-icons/lu';
+import { BiDuplicate } from 'react-icons/bi';
+import { FaRegCheckCircle } from 'react-icons/fa';
+import { FiExternalLink } from 'react-icons/fi';
+import { BiWorld } from 'react-icons/bi';
+import { LuSquareEqual } from 'react-icons/lu';
+import { MdOutlineMedicalServices } from 'react-icons/md';
+import { BiNote } from 'react-icons/bi';
+import { BiRename } from 'react-icons/bi';
 import {
   AntiPatternNameContainer,
   AntiPatternSectionContainer,
   AntiPatternSectionDescription,
-  AntiPatternSectionImageDescription,
   AntiPatternTag,
   HeaderContainer,
   HeaderPathContainer,
@@ -17,52 +23,128 @@ import {
   AntiPatternsSectionImageContainer,
   AntiPatternsSectionImage,
   AntiPatternSectionImageTitle,
+  AntiPatternSectionLink,
+  RelatedAntiPatternLink,
 } from './styles';
 import useDetails from './hooks/useDetails';
 import { SCREENS } from '../../utils/screens';
+import {
+  HyoerlinkField,
+  RelatedAntiPatternField,
+  TextImageField,
+} from '../../components/AntiPatternsList/types';
 
 const AntiPatternSection = ({
-  antiPatternSection,
-  iconName,
+  data,
+  icon,
   sectionTile,
   showDivider,
 }: {
-  antiPatternSection: { [key: string]: string };
-  iconName: string;
+  data: TextImageField | HyoerlinkField[] | RelatedAntiPatternField[] | string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  icon: any;
   sectionTile: string;
   showDivider?: boolean;
-}) => (
-  <>
-    <AntiPatternSectionContainer
-      columns={antiPatternSection.image ? { base: 1, md: 2, lg: 2 } : 0}
-    >
-      <Flex flexDirection="column" width="fit-content">
-        <Flex>
-          <Image src={iconName} marginRight="6px" />
-          <AntiPatternSectionImageTitle>
-            {sectionTile}
-          </AntiPatternSectionImageTitle>
+}) => {
+  if (typeof data === 'string') {
+    if (data === '') {
+      return null;
+    }
+
+    return (
+      <>
+        <AntiPatternSectionContainer columns={0}>
+          <Flex flexDirection="column" width="fit-content">
+            <Flex alignItems={'center'} gap="4px">
+              <Icon as={icon} w={5} h={5} color="#FF6D00" />
+              <AntiPatternSectionImageTitle>
+                {sectionTile}
+              </AntiPatternSectionImageTitle>
+            </Flex>
+            <AntiPatternSectionDescription>
+              {data}
+            </AntiPatternSectionDescription>
+          </Flex>
+        </AntiPatternSectionContainer>
+
+        {showDivider && <Divider marginTop="28px" color="border" width="97%" />}
+      </>
+    );
+  }
+
+  if (Array.isArray(data)) {
+    if (data.length === 0) {
+      return null;
+    }
+
+    return (
+      <>
+        <AntiPatternSectionContainer columns={0}>
+          <Flex flexDirection="column" width="fit-content">
+            <Flex alignItems={'center'} gap="4px">
+              <Icon as={icon} w={5} h={5} color="#FF6D00" />
+              <AntiPatternSectionImageTitle>
+                {sectionTile}
+              </AntiPatternSectionImageTitle>
+            </Flex>
+            {data
+              ? data.map((item) =>
+                  'href' in item ? (
+                    <AntiPatternSectionLink
+                      key={item.title}
+                      href={item.href}
+                      isExternal
+                    >
+                      {item.title}
+                    </AntiPatternSectionLink>
+                  ) : (
+                    <RelatedAntiPatternLink
+                      key={item.title}
+                      to={`/details/${item.title}`}
+                    >
+                      {item.title}
+                    </RelatedAntiPatternLink>
+                  )
+                )
+              : '-'}
+          </Flex>
+        </AntiPatternSectionContainer>
+
+        {showDivider && <Divider marginTop="28px" color="border" width="97%" />}
+      </>
+    );
+  }
+
+  return (
+    <>
+      <AntiPatternSectionContainer
+        columns={data.image ? { base: 1, md: 2, lg: 2 } : 0}
+      >
+        <Flex flexDirection="column" width="fit-content">
+          <Flex alignItems={'center'} gap="4px">
+            <Icon as={icon} w={5} h={5} color="#FF6D00" />
+            <AntiPatternSectionImageTitle>
+              {sectionTile}
+            </AntiPatternSectionImageTitle>
+          </Flex>
+          <AntiPatternSectionDescription>
+            {data.text}
+          </AntiPatternSectionDescription>
         </Flex>
-        <AntiPatternSectionDescription>
-          {antiPatternSection.text}
-        </AntiPatternSectionDescription>
-      </Flex>
 
-      {antiPatternSection.image && (
-        <AntiPatternsSectionImageContainer>
-          <AntiPatternsSectionImage
-            src={require(`../../assets/${antiPatternSection.image}`)}
-          />
-          <AntiPatternSectionImageDescription>
-            {antiPatternSection.description}
-          </AntiPatternSectionImageDescription>
-        </AntiPatternsSectionImageContainer>
-      )}
-    </AntiPatternSectionContainer>
+        {data.image && (
+          <AntiPatternsSectionImageContainer>
+            <AntiPatternsSectionImage
+              src={require(`../../assets/${data.image}`)}
+            />
+          </AntiPatternsSectionImageContainer>
+        )}
+      </AntiPatternSectionContainer>
 
-    {showDivider && <Divider marginTop="28px" color="border" width="97%" />}
-  </>
-);
+      {showDivider && <Divider marginTop="28px" color="border" width="97%" />}
+    </>
+  );
+};
 
 export function Details() {
   const { isOpen, onToggle, onOpen, onClose, navigate, antiPatternsData } =
@@ -132,22 +214,61 @@ export function Details() {
         </AntiPatternNameContainer>
       </HeaderContainer>
 
+      {antiPatternsData.alsoKnownAs && (
+        <AntiPatternSection
+          data={antiPatternsData.alsoKnownAs}
+          sectionTile="Also known as"
+          showDivider
+          icon={BiRename}
+        />
+      )}
+
       <AntiPatternSection
-        antiPatternSection={antiPatternsData.problem}
-        sectionTile="Description"
+        data={antiPatternsData.problem}
+        sectionTile="Problem"
         showDivider
-        iconName={DescriptionIcon}
+        icon={LuCircleAlert}
       />
       <AntiPatternSection
-        antiPatternSection={antiPatternsData.example}
-        sectionTile="Occurency in practice example"
+        data={antiPatternsData.symptomsAndConsequences}
+        sectionTile="Symptoms and Consequences"
         showDivider
-        iconName={ExampleIcon}
+        icon={MdOutlineMedicalServices}
       />
       <AntiPatternSection
-        antiPatternSection={antiPatternsData.solution}
+        data={antiPatternsData.solution}
         sectionTile="Solution"
-        iconName={SolutionIcon}
+        showDivider
+        icon={FaRegCheckCircle}
+      />
+      <AntiPatternSection
+        data={antiPatternsData.resultingContext}
+        sectionTile="Resulting Context"
+        showDivider
+        icon={LuSquareEqual}
+      />
+      <AntiPatternSection
+        data={antiPatternsData.example}
+        sectionTile="Example"
+        showDivider
+        icon={BiWorld}
+      />
+      <AntiPatternSection
+        data={antiPatternsData.notes || ''}
+        sectionTile="Notes"
+        showDivider
+        icon={BiNote}
+      />
+      <AntiPatternSection
+        data={antiPatternsData.relatedAntiPatterns}
+        sectionTile="Related Anti-patterns"
+        showDivider
+        icon={BiDuplicate}
+      />
+      <AntiPatternSection
+        data={antiPatternsData.references}
+        sectionTile="References"
+        icon={FiExternalLink}
       />
     </Flex>
   );

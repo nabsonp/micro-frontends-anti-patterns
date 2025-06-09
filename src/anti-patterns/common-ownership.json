@@ -1,19 +1,31 @@
 {
-  "name": "Common Ownership",
-  "category": "Development",
-  "problem": {
-    "text": "A single team is tasked with managing all MFEs, which can occur either due to a lack of team division or when teams are segmented based on technical aspects such as data, frontend, and backend. However, one of the key benefits of MFE architecture is independence, so adopting MFE Architecture without distinct teams to operate independently negates this advantage.",
-    "image": "",
-    "description": ""
-  },
-  "example": {
-      "text": "A small company chooses to adopt the MFE architecture. Due to the insufficient number of developers, it is not feasible to create teams by domain. So, developers compose a single team responsible for all MFEs. In this scenario, the cost of maintaining different micro frontends is not justified and is only an additional challenge for the development team.",
-      "image": "",
-      "description": ""
+    "name": "Common Ownership",
+    "alsoKnownAs": "",
+    "category": "Development",
+    "problem": {
+      "text": "A single team is tasked with managing all MFEs.",
+      "image": ""
     },
-  "solution": {
-      "text": "Context should be the defining factor when structuring development teams. Therefore, defining the boundaries of teams and MFEs is essential according to Domain-driven Design (DDD), so a team will be responsible only for MFEs within its domain. Creating shared libraries can facilitate boundary definition and promote greater team independence.",
-      "image": "",
-      "description": ""
-    }
-}
+    "symptomsAndConsequences": "Can occur either due to a lack of team division or when teams are segmented based on technical aspects such as data, frontend, and backend. Adopting MFE without distinct teams compromises the intended independence of the architecture.",
+    "solution": {
+      "text": "Define the boundaries of teams and MFEs according to Domain-driven Design (DDD). Creating shared libraries can facilitate boundary definition and promote greater team independence.",
+      "image": "common-ownership-solution.png"
+    },
+    "resultingContext": "Each team will be responsible only for MFEs within its domain and the MFEs will share components and code through shared libraries.",
+    "example": {
+      "text": "Consider an organization where a single centralized team is responsible for maintaining all micro frontends, including users, checkout, and products, regardless of their domain context. This setup leads to bottlenecks, reduces team autonomy, and creates friction between domain experts and technical teams. By restructuring teams according to Domain-driven Design principles, the organization creates cross-functional teams, each responsible for its micro frontends, services, and databases.",
+      "image": ""
+    },
+    "notes": "The shared libraries must be carefully handled to avoid Dependency hell.",
+    "relatedAntiPatterns": [
+      {
+        "title": "Dependency hell"
+      }
+    ],
+    "references": [
+      {
+        "title": "A Catalog of Micro Frontends Anti-patterns",
+        "href": "10.1109/ICSE55347.2025.00079"
+      }
+    ]
+  }

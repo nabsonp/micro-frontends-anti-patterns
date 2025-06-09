@@ -1,0 +1,28 @@
+{
+    "name": "Bidirectional Data Flow",
+    "alsoKnownAs": "A Return Ticket, Please",
+    "category": "Inter-frontend",
+    "problem": {
+      "text": "Bidirectional communication between the host application (container) and remote micro frontends.",
+      "image": ""
+    },
+    "symptomsAndConsequences": "Difficult to maintain when it happens across the entire application.",
+    "solution": {
+      "text": "Adopt a unidirectional data flow inspired by patterns like Flux or Model-View-Intent (MVI). In this model, data flows in a single direction: Action → State Update → View Update.",
+      "image": ""
+    },
+    "resultingContext": "Unidirectional data flow reduces coupling, simplifies debugging, and makes the system more predictable.",
+    "example": {
+      "text": "Consider a dashboard application where the host container and several remote micro frontends (such as analytics, notifications, and user profile widgets) continuously exchange data back and forth. For example, when the analytics MFE updates a filter, it sends data to the host, which then propagates it back to the notifications MFE and others. Over time, this bidirectional communication creates complex dependencies, making it difficult to trace the origin of state changes or debug unexpected behaviors. After applying the solution, the team restructures the system to follow a unidirectional data flow pattern inspired by the Model-View-Intent (MVI) design pattern. In this pattern, the user interacts with the system, generating actions that flow through the intent and model layers, thereby updating the model’s state. The view then observes these state changes and updates the UI accordingly.",
+      "image": "bidirectional-data-flow-example.png"
+    },
+    "notes": "",
+    "relatedAntiPatterns": [],
+    "references": [
+      {
+        "title": "Microfrontends Anti-Patterns: Seven Years in the Trenches",
+        "href": "https://www.infoq.com/presentations/microfrontend-antipattern/"
+      }
+    ]
+  }
+  

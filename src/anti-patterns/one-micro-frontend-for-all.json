@@ -1,0 +1,32 @@
+{
+    "name": "One Micro Frontend for all",
+    "alsoKnownAs": "",
+    "category": "Inter-frontend",
+    "problem": {
+      "text": "A single micro frontend is created and imported by all other MFEs.",
+      "image": ""
+    },
+    "symptomsAndConsequences": "Misuse of local storage, pub/sub mechanisms, and web socket mechanisms to implement communication between the MFE for all and others. Having a single point of failure that can break the entire application.",
+    "solution": {
+      "text": "Use the blackbox pattern to encapsulate shared functionality. In this model, the component exposes a clear input, renders itself into the DOM with its own internal workflow, and provides an output that other micro frontends can consume.",
+      "image": ""
+    },
+    "resultingContext": "This preserves the independence of MFEs while still enabling interoperation through well-defined boundaries.",
+    "example": {
+      "text": "In a banking application, several MFEs—such as MFE-accounts, MFE-cards, and MFE-loans—need to display a UI for executing money transactions. Instead of having a tightly coupled shared micro frontend imported directly by all others, the system applies the blackbox pattern using a TransactionsProvider component. When a transaction is needed, an MFE triggers an openTransaction event with the needed arguments. The TransactionsProvider renders itself into the DOM, manages the transaction flow independently, and, upon completion, dispatches a transactionFinished event with the result (success or failed).",
+      "image": "one-micro-frontend-for-all-example.png"
+    },
+    "notes": "",
+    "relatedAntiPatterns": [
+      {
+        "title": "Global state communication"
+      }
+    ],
+    "references": [
+      {
+        "title": "Micro-frontend \"Blackbox Pattern\"",
+        "href": "https://medium.com/@ngkamperlo/micro-frontend-blackbox-pattern-295c40b681e4"
+      }
+    ]
+  }
+  

@@ -1,19 +1,34 @@
 {
   "name": "Mega Frontend",
+  "alsoKnownAs": "",
   "category": "Intra-frontend",
   "problem": {
-    "text": "Decomposing the architecture into a few MFEs encompassing numerous screens and fragments manifest this anti-pattern. The MFE inherits the challenges of a monolithic frontend, such as difficulties in testing, slow builds and deployments, high coupling between its components, lack of modularity, and limited scalability.",
-    "image": "",
-    "description": ""
+    "text": "A single micro frontend takes on multiple responsibilities or concerns that should be separated.",
+    "image": ""
   },
-  "example": {
-      "text": "An e-commerce system is decomposed into just two MFEs, with mfe-users related to users and mfe-shopping related to products and purchases. The latter MFE includes screens that display product listings, product details, purchase confirmations, and purchase history. Decomposing the mfe-shopping into at least two MFEs is necessary: one containing the product listing and product details screens, belonging to the product domain; and another containing the confirmation and purchase history screens, belonging to the purchase domain.",
-      "image": "",
-      "description": ""
-    },
+  "symptomsAndConsequences": "This often happens when an MFE includes several screens or unrelated fragments, resulting in a bloated unit.",
   "solution": {
-      "text": "To avoid this problem, the development team must work closely with the product team to gain a deep understanding of the domains and reflect them accurately in the architecture. To fix this issue, the team should reevaluate the architecture and divide the MFEs into more granular units, separating functionalities into smaller and specialized MFEs based on domains. This approach helps reduce complexity, enhance maintainability, and foster a modular and scalable architecture.",
-      "image": "",
-      "description": ""
+    "text": "Each micro frontend should focus on a specific subdomain of the application. Reevaluate and decompose large MFEs into smaller, more specialized units based on domain concerns.",
+    "image": ""
+  },
+  "resultingContext": "Development teams collaborate closely with product teams to gain a clear understanding of domain boundaries and reflect them in the system’s architecture.",
+  "example": {
+    "text": "An e-commerce system is decomposed into just two MFEs, with mfe-users related to users and mfe-shopping related to products and purchases. The latter MFE includes screens that display product listings, product details, purchase confirmations, and purchase history. Decomposing the mfe-shopping into at least two MFEs is necessary: one containing the product listing and product details screens, belonging to the product domain; and another containing the confirmation and purchase history screens, belonging to the purchase domain.",
+    "image": "mega-frontend-example.png"
+  },
+  "notes": "When redesigning the architecture, be careful to not create Nano Frontends. Additionally, analyze whether you should be implementing MFEs at all and not fall into the Micro Frontends as the Goal Anti-pattern.",
+  "relatedAntiPatterns": [
+    {
+      "title": "Nano Frontend"
+    },
+    {
+      "title": "Micro Frontends as the Goal"
     }
+  ],
+  "references": [
+    {
+      "title": "A Catalog of Micro Frontends Anti-patterns",
+      "href": "10.1109/ICSE55347.2025.00079"
+    }
+  ]
 }
