@@ -1,0 +1,32 @@
+{
+    "name": "Access to different domains",
+    "alsoKnownAs": "",
+    "category": "Inter-frontend",
+    "problem": {
+      "text": "A micro frontend directly accesses APIs from multiple business domains.",
+      "image": ""
+    },
+    "symptomsAndConsequences": "The problem leads to tightly coupled and hard-to-maintain architectures. Over time, this approach results in unmanageable dependencies, hinders API deprecation, and introduces issues such as over-fetching and cache synchronization problems.",
+    "solution": {
+      "text": "Apply the principle of API Federation to expose data from multiple domain APIs through a single, centralized, and strongly typed interface. Implement a local schema that is updated by a unified gateway using GraphQL, which defines interfaces to interact with the backend and combines all APIs into a single federated API that all micro frontends can consume.",
+      "image": ""
+    },
+    "resultingContext": "MFEs can consume these interfaces by sending queries, mutations, and subscriptions to their local state, which communicates with the backend through the unified GraphQL API, acting as the single point of access to all backend domains.",
+    "example": {
+      "text": "Consider a system where the product MFE directly queries multiple backend APIs, such as the employees domain, assets domain, billing domain, and user domain, tightly coupling the frontend to each domain's implementation. This results in a brittle architecture, making it challenging to update APIs and leading to issues like over-fetching and inconsistent caching across domains. After applying the solution, the system introduces a GraphQL API as a federated API layer. MFEs interact only with the GraphQL API, sending queries, mutations, and subscriptions to a single point of access. The federated API aggregates and unifies the data across multiple domains, simplifying the frontend communication, reducing coupling, and ensuring that MFEs only retrieve the data they actually need.",
+      "image": "access-to-different-domains-example.png"
+    },
+    "notes": "Developers must consider the Global state communication Anti-pattern consequences when applying this solution.",
+    "relatedAntiPatterns": [
+      {
+        "title": "Global state communication"
+      }
+    ],
+    "references": [
+      {
+        "title": "Micro Front-End Architecture at Enterprise Scale (Updated July 2020)",
+        "href": "https://medium.com/swlh/micro-front-end-architecture-at-enterprise-scale-updated-july-2020-9159a4e0cc49"
+      }
+    ]
+  }
+  

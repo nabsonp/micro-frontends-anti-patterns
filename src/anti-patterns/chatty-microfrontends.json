@@ -1,0 +1,27 @@
+{
+    "name": "Chatty Micro Frontends",
+    "alsoKnownAs": "Chatty Frontends",
+    "category": "Inter-frontend",
+    "problem": {
+      "text": "Excessive communication between fragments caused by broadcasting events for every action.",
+      "image": ""
+    },
+    "symptomsAndConsequences": "Performance overhead by broadcasting several events.",
+    "solution": {
+      "text": "Emit only meaningful events and introduce them gradually, based on the presence of interested consumers. Avoid broadcasting events for every action.",
+      "image": ""
+    },
+    "resultingContext": "Publishing only meaningful events reduces noise, minimizes coupling, and helps maintain a clear and intentional event-driven architecture.",
+    "example": {
+      "text": "Consider that a search MFE broadcasts every keystroke event, causing unnecessary load on the analytics and recommendation MFEs, which listen but do not need to react to such fine-grained updates. This leads to increased performance overhead and unnecessary processing. After applying the solution, the development team revises the event system to emit only meaningful events, such as 'search submitted' or 'filter applied,' and only when there are known consumers registered to handle those events. This change reduces event noise, improves performance, and simplifies the event-driven architecture, making the system easier to understand and maintain.",
+      "image": ""
+    },
+    "notes": "",
+    "relatedAntiPatterns": [],
+    "references": [
+      {
+        "title": "Top 10 Micro Frontend Anti-Patterns",
+        "href": "https://dev.to/florianrappl/top-10-micro-frontend-anti-patterns-3809"
+      }
+    ]
+  }

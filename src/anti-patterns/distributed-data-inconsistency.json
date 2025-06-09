@@ -1,0 +1,32 @@
+{
+    "name": "Distributed Data Inconsistency",
+    "alsoKnownAs": "",
+    "category": "Inter-frontend",
+    "problem": {
+      "text": "Inconsistency in the data shared across micro frontends due to lack of change propagation.",
+      "image": ""
+    },
+    "symptomsAndConsequences": "The original data changes and those changes are not propagated. If a micro frontend holds a replicated version of the data, it is unclear whether it is allowed to update it. This causes divergence between the original and the duplicate.",
+    "solution": {
+      "text": "Keep data where it belongs. Do not allow other micro frontends to access the data directly; instead, expose it indirectly through attributes or properties.",
+      "image": ""
+    },
+    "resultingContext": "MFEs do not duplicate data and always access the source MFE to retrieve it, which exposes the data through attributes or properties.",
+    "example": {
+      "text": "In a financial platform, the MFE-account is responsible for managing the account balance, while the MFE-transactions handles user-initiated fund transfers. Instead of querying the up-to-date balance from MFE-account, the transactions MFE relies on a locally stored copy of the balance retrieved during a previous session. When a user attempts to transfer funds, MFE-transactions validates the operation based on its outdated balance, believing sufficient funds are available. However, since the actual balance in MFE-account has already decreased due to other transactions, the transfer request ultimately fails when it reaches the backend. By applying the solution, the transactions MFE no longer duplicates the balance but always queries the authoritative source (MFE-account or a backend API) at the moment of the operation.",
+      "image": ""
+    },
+    "notes": "Avoid implementing centralized states to avoid the Global state communication Anti-pattern.",
+    "relatedAntiPatterns": [
+      {
+        "title": "Global state communication"
+      }
+    ],
+    "references": [
+      {
+        "title": "Top 10 Micro Frontend Anti-Patterns",
+        "href": "https://dev.to/florianrappl/top-10-micro-frontend-anti-patterns-3809"
+      }
+    ]
+  }
+  

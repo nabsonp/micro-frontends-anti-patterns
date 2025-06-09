@@ -1,0 +1,27 @@
+{
+    "name": "Avoiding observability",
+    "alsoKnownAs": "",
+    "category": "Operations",
+    "problem": {
+      "text": "No observability is implemented anywhere.",
+      "image": ""
+    },
+    "symptomsAndConsequences": "You cannot debug an error or identify the micro frontend that originated it because no performance metrics or error logs were implemented.",
+    "solution": {
+      "text": "Collect metrics, traces and implement centralized logs.",
+      "image": ""
+    },
+    "resultingContext": "Developers can debug a problem and identify its cause efficiently by consulting traces and logs from all MFEs in a centralized way.",
+    "example": {
+      "text": "Consider a system with three micro frontends: MF A, MF B, and MF C. Each performs user interactions, backend requests, and updates its internal state. However, none of them send logs, errors, or performance metrics to a centralized logging system. When a production issue occurs, such as a failed API call or a broken UI interaction, developers cannot determine which micro frontend caused the problem because no data is available in the logging layer. This lack of observability leads to delayed debugging, frustrated users, and increased operational costs. After applying the solution, all MFEs emit structured logs, metrics, and traces to a centralized observability layer. As a result, developers can efficiently identify the source of issues, monitor performance trends, and proactively resolve problems.",
+      "image": "avoiding-obersavility-example.png"
+    },
+    "notes": "",
+    "relatedAntiPatterns": [],
+    "references": [
+      {
+        "title": "Top 10 Micro Frontend Anti-Patterns",
+        "href": "https://dev.to/florianrappl/top-10-micro-frontend-anti-patterns-3809"
+      }
+    ]
+  }

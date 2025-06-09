@@ -1,0 +1,49 @@
+{
+    "name": "Dependent deployment",
+    "alsoKnownAs": "Hidden Monolith, The deployment queue of hell, Dependent Deploy",
+    "category": "Inter-frontend",
+    "problem": {
+      "text": "Micro frontends become so tightly coupled that their deployment requires coordination across multiple teams.",
+      "image": ""
+    },
+    "symptomsAndConsequences": "One MFE cannot be deployed or rolled back without affecting another. Features must be released simultaneously across MFEs, forcing teams into synchronized release cycles. This leads to deployment queues, where MFEs must be deployed in a specific order to avoid breaking the application, increasing operational complexity and risk.",
+    "solution": {
+      "text": "Promote independent deployment for each micro frontend. Implement feature flags that all relevant MFEs can check at runtime when a coordinated release is necessary, allowing features to be toggled on or off independently of the deployment timeline.",
+      "image": ""
+    },
+    "resultingContext": "Every MFE has its own CI/CD pipeline and can be deployed or rolled back without relying on other MFEs. MFE boundaries are defined according to Domain-Driven Design principles, reducing tight coupling and enabling true autonomy at the deployment level.",
+    "example": {
+      "text": "In a SaaS application, a new feature—team-based project tagging—is developed across three MFEs: MFE-projects, MFE-teams, and MFE-dashboard. The MFE-projects team finishes its part early and needs to deploy it soon because other unrelated fixes and improvements are queued for release. However, the MFE-teams and MFE-dashboard teams are still finalizing their portions of the feature and cannot yet release. Without a proper mechanism, the MFE-projects team is blocked, forced to wait for the others, creating a deployment queue and increasing risk. By applying the solution, the MFE-projects team deploys its changes immediately but guards the new feature behind a feature flag, keeping it off in production until all dependent MFEs are ready. Once all teams have deployed their parts, the feature flag is toggled on, activating the new functionality across the system without requiring perfectly synchronized deployments.",
+      "image": ""
+    },
+    "notes": "Be careful when defining the boundaries to avoid Nano and Mega Frontends.",
+    "relatedAntiPatterns": [
+      {
+        "title": "Nano Frontend"
+      },
+      {
+        "title": "Mega Frontends"
+      },
+      {
+        "title": "Spaghetti Architecture"
+      },
+      {
+        "title": "No Versioning"
+      }
+    ],
+    "references": [
+      {
+        "title": "Top 10 Micro Frontend Anti-Patterns",
+        "href": "https://dev.to/florianrappl/top-10-micro-frontend-anti-patterns-3809"
+      },
+      {
+        "title": "Rules of Micro-Frontends",
+        "href": "https://www.infoxicator.com/rules-of-micro-frontends"
+      },
+      {
+        "title": "Understanding and implementing microfrontends on AWS: AWS Prescriptive Guidance",
+        "href": "https://docs.aws.amazon.com/pdfs/prescriptive-guidance/latest/micro-frontends-aws/micro-frontends-aws.pdf"
+      }
+    ]
+  }
+  

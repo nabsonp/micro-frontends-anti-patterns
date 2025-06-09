@@ -1,0 +1,32 @@
+{
+    "name": "Spaghetti Architecture",
+    "alsoKnownAs": "Tight coupling",
+    "category": "Inter-frontend",
+    "problem": {
+      "text": "Micro frontends are structured in a disorganized way.",
+      "image": ""
+    },
+    "symptomsAndConsequences": "Leading to a tangled web of dependencies and interactions. This high degree of coupling between MFEs makes the system difficult to scale, test, and maintain.",
+    "solution": {
+      "text": "Maintain loose coupling between micro frontends. Avoid direct references that rely on internal implementation details of other MFEs, such as URLs, module paths, or internal names.",
+      "image": ""
+    },
+    "resultingContext": "MFEs designed to interact through well-defined contracts, events, or shared interfaces.",
+    "example": {
+      "text": "In a travel booking platform, the MFE-flights, MFE-hotels, and MFE-packages reference each other directly using hardcoded module imports, internal URLs, and shared utility functions not exposed through official interfaces. For instance, MFE-hotels directly imports a pricing formatter from MFE-flights, and MFE-packages calls internal APIs exposed only for local use by MFE-hotels. Over time, this creates a tangled web of dependencies where any change in one MFE risks breaking others, making the system fragile, hard to test, and difficult to scale. By applying the solution, the teams refactor the system to remove internal references, replacing them with well-defined contracts, shared interfaces, or event-based communication, restoring clear boundaries and reducing coupling between MFEs.",
+      "image": ""
+    },
+    "notes": "",
+    "relatedAntiPatterns": [
+      {
+        "title": "Knot Micro Frontend"
+      }
+    ],
+    "references": [
+      {
+        "title": "Top 10 Micro Frontend Anti-Patterns",
+        "href": "https://dev.to/florianrappl/top-10-micro-frontend-anti-patterns-3809"
+      }
+    ]
+  }
+  

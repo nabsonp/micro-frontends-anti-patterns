@@ -1,0 +1,47 @@
+{
+  "name": "Global state communication",
+  "alsoKnownAs": "Relax, It’s just code; Sharing state across Micro Frontends; Global State; Shared Global State.",
+  "category": "Inter-frontend",
+  "problem": {
+    "text": "Using shared states violates the principle of segregation, compromising the independence of each micro frontend and increasing coupling.",
+    "image": ""
+  },
+  "symptomsAndConsequences": "Changes in the shared state need coordination with every MFE, otherwise you may introduce bugs in the ones reading the state, which decreases independence.",
+  "solution": {
+    "text": "Each micro frontend should have its own event store. To enable communication, use an event emitter-based approach instead of sharing state directly.",
+    "image": ""
+  },
+  "resultingContext": "Every MFE may have a local state (if needed) and they communicate by subscribing in the events dispatched by other MFEs, not directly accessing their state.",
+  "example": {
+    "text": "In a financial platform, the MFE-account maintains the current account balance in a shared global state, allowing other MFEs to directly access it when needed. When the team decides to internationalize the app and extend currency support, MFE-account updates the global state structure to include both the numeric balance and its associated currency. Since other MFEs directly depend on the shared state without proper contracts or decoupling, these changes break their logic. By applying the solution, each MFE stops directly depending on shared state and instead subscribes to events or queries data through well-defined, versioned interfaces, ensuring that updates in one MFE do not unexpectedly break others.",
+    "image": ""
+  },
+  "notes": "When creating local states, be careful to avoid the Distributed Data Inconsistency Anti-pattern.",
+  "relatedAntiPatterns": [
+    {
+      "title": "Distributed Data Inconsistency"
+    }
+  ],
+  "references": [
+    {
+      "title": "Microfrontends Anti-Patterns: Seven Years in the Trenches",
+      "href": "https://www.infoq.com/presentations/microfrontend-antipattern/"
+    },
+    {
+      "title": "4 Micro-Frontend Anti-Patterns",
+      "href": "https://levelup.gitconnected.com/four-micro-frontend-anti-patterns-58aaa9fe19d5"
+    },
+    {
+      "title": "Chapter 4. Discovering Micro-Frontend Architectures",
+      "href": "https://www.oreilly.com/library/view/building-micro-frontends/9781492082989/ch04.html"
+    },
+    {
+      "title": "TechLead Journal: #68 - 2021 Accelerate State of DevOps Report - Nathen Harvey",
+      "href": "https://techleadjournal.dev/page/16/"
+    },
+    {
+      "title": "Compositional Qualities of Microfrontends: The LdoD Archive",
+      "href": "https://fenix.tecnico.ulisboa.pt/downloadFile/281870113706102/49372-joao-raimundo.pdf"
+    }
+  ]
+}

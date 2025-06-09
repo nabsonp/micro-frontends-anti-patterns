@@ -1,0 +1,48 @@
+{
+    "name": "Framework Frenzy",
+    "alsoKnownAs": "Framework Madness, Hydra of Lerna, Multiple frameworks approach, Multiple technologies in the same application, Multiple-frameworks approach.",
+    "category": "Development",
+    "problem": {
+      "text": "Introducing multiple frameworks without a real need, disregarding the complexity of communication between components built with different technologies.",
+      "image": ""
+    },
+    "symptomsAndConsequences": "Several MFEs are implemented with different frameworks and developers must be expert in several frameworks, loading may take a long time to load all dependencies from each framework.",
+    "solution": {
+      "text": "Whenever possible, use a single framework across all micro frontends. If there is an opportunity to standardize, prefer consistency over unnecessary flexibility.",
+      "image": ""
+    },
+    "resultingContext": "All MFEs are implemented using the same framework and technologies, facilitating maintenance and onboarding of new developers.",
+    "example": {
+      "text": "In a content management platform, the MFE-editor is built using React, the MFE-dashboard uses Angular, and the MFE-analytics is implemented in Vue.js. Although the teams initially chose the best technology for their specific needs, over time, the project became increasingly difficult to maintain: developers need expertise in three frameworks to work across MFEs, shared libraries must be rewritten for each framework, and the application’s startup time grows due to loading the dependencies of all three frameworks. By applying the solution, the organization gradually standardizes all MFEs onto React, simplifying development, improving team flexibility, reducing duplicated effort, and streamlining application performance by minimizing unnecessary framework overhead.",
+      "image": ""
+    },
+    "notes": "Be careful to avoid the Golden Hammer Anti-pattern when using the same framework every time.",
+    "relatedAntiPatterns": [
+      {
+        "title": "Golden Hammer"
+      }
+    ],
+    "references": [
+      {
+        "title": "Top 10 Micro Frontend Anti-Patterns",
+        "href": "https://dev.to/florianrappl/top-10-micro-frontend-anti-patterns-3809"
+      },
+      {
+        "title": "Microfrontends Anti-Patterns: Seven Years in the Trenches",
+        "href": "https://www.infoq.com/presentations/microfrontend-antipattern/"
+      },
+      {
+        "title": "4 Micro-Frontend Anti-Patterns",
+        "href": "https://levelup.gitconnected.com/four-micro-frontend-anti-patterns-58aaa9fe19d5"
+      },
+      {
+        "title": "TechLead Journal: #68 - 2021 Accelerate State of DevOps Report - Nathen Harvey",
+        "href": "https://techleadjournal.dev/page/16/"
+      },
+      {
+        "title": "Compositional Qualities of Microfrontends: The LdoD Archive",
+        "href": "https://fenix.tecnico.ulisboa.pt/downloadFile/281870113706102/49372-joao-raimundo.pdf"
+      }
+    ]
+  }
+  

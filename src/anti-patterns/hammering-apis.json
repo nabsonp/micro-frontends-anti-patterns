@@ -1,0 +1,38 @@
+{
+    "name": "Hammering APIs",
+    "alsoKnownAs": "Let’s hammer the APIs",
+    "category": "Inter-frontend",
+    "problem": {
+      "text": "Multiple micro frontends independently call the same API endpoint.",
+      "image": ""
+    },
+    "symptomsAndConsequences": "Duplicated requests, unnecessary load on backend services, and scalability issues.",
+    "solution": {
+      "text": "Evaluate whether the concerned micro frontends truly belong to separate domains. If not, consider merging them into a single MFE that handles the request once. If separation is justified, redesign the architecture to centralize the API call in a shared container or parent component, which makes the request once and distributes the data to the dependent micro frontends.",
+      "image": ""
+    },
+    "resultingContext": "Every MFE makes calls to routes related to their domains.",
+    "example": {
+      "text": "In an e-commerce platform, both the MFE-list and the MFE-recommendations independently call the same product details API to fetch pricing and availability information for the same set of items. As a result, every time a user visits the product page, the backend receives duplicated requests from both MFEs, unnecessarily increasing load and degrading performance. By applying the solution, the architecture is redesigned so that a shared parent container makes a single API call to retrieve the product data and passes the relevant pieces down as props or events to the child MFEs, reducing redundant traffic and improving scalability without sacrificing the separation of frontend concerns.",
+      "image": ""
+    },
+    "notes": "When merging MFEs, be careful to not fall into the Mega Frontends Anti-pattern. When redesigning the architecture, consider using GraphQL, as proposed in the solution of the Access to different domains Anti-pattern.",
+    "relatedAntiPatterns": [
+      {
+        "title": "Access to different domains"
+      },
+      {
+        "title": "Mega Frontend"
+      },
+      {
+        "title": "Nano Frontend"
+      }
+    ],
+    "references": [
+      {
+        "title": "Microfrontends Anti-Patterns: Seven Years in the Trenches",
+        "href": "https://www.infoq.com/presentations/microfrontend-antipattern/"
+      }
+    ]
+  }
+  

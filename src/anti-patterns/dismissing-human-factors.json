@@ -1,0 +1,35 @@
+{
+    "name": "Dismissing human factors",
+    "alsoKnownAs": "",
+    "category": "Development",
+    "problem": {
+      "text": "Teams pursue technical goals and deadlines without considering the well-being, morale, or work-life balance of their members.",
+      "image": ""
+    },
+    "symptomsAndConsequences": "Micro frontends are misused as a technical solution, while their true potential to improve team autonomy and structure is neglected. Developers suffer from overworking, micromanagement, and unrealistic expectations.",
+    "solution": {
+      "text": "Strengthen teams and avoid central management as much as possible.",
+      "image": ""
+    },
+    "resultingContext": "Superiors empowering teams to work independently and without controlling every action or demanding unrealistic deadlines.",
+    "example": {
+      "text": "In a company migrating to a micro frontend architecture, leadership pressures all teams to quickly break apart a monolithic frontend, assigning technical tasks like splitting components and wiring up module federation without giving teams the time or autonomy to reorganize around domain ownership. Developers are micromanaged, expected to coordinate constant cross-team changes, and overloaded with deadlines, turning the migration into a stressful technical exercise rather than an opportunity to improve team autonomy. The company should be refocusing on empowering teams, allowing them to control their micro frontends, align work with their domain expertise, and set realistic delivery goals.",
+      "image": ""
+    },
+    "notes": "Make sure that micro frontend is the right architectural style for your scenario and divide teams according to domains to avoid Micro Frontend as the goal and Common Ownership anti-patterns, respectively.",
+    "relatedAntiPatterns": [
+      {
+        "title": "Common Ownership"
+      },
+      {
+        "title": "Micro Frontend as the goal"
+      }
+    ],
+    "references": [
+      {
+        "title": "Top 10 Micro Frontend Anti-Patterns",
+        "href": "https://dev.to/florianrappl/top-10-micro-frontend-anti-patterns-3809"
+      }
+    ]
+  }
+  
