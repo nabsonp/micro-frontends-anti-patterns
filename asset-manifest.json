@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/micro-frontends-anti-patterns/static/js/main.98703055.js",
+    "main.js": "/micro-frontends-anti-patterns/static/js/main.02056554.js",
     "static/js/453.b17c1d85.chunk.js": "/micro-frontends-anti-patterns/static/js/453.b17c1d85.chunk.js",
     "static/media/unmediated-legacy-integration-example.png": "/micro-frontends-anti-patterns/static/media/unmediated-legacy-integration-example.417687c60a4f3d0b24e6.png",
     "static/media/access-to-different-domains-example.png": "/micro-frontends-anti-patterns/static/media/access-to-different-domains-example.c2c29d77f53970b0e04c.png",
@@ -18,6 +18,7 @@
     "static/media/one-micro-frontend-for-all-example.png": "/micro-frontends-anti-patterns/static/media/one-micro-frontend-for-all-example.b224c0768cba2aa77633.png",
     "static/media/dependency-hell-example.png": "/micro-frontends-anti-patterns/static/media/dependency-hell-example.dc12a9af6ac1c50bec06.png",
     "static/media/ufam.jpg": "/micro-frontends-anti-patterns/static/media/ufam.32086abc8fe1c9ac66c7.jpg",
+    "static/media/matheus_oliveira.jpg": "/micro-frontends-anti-patterns/static/media/matheus_oliveira.f29267512b8c7b48a31c.jpg",
     "static/media/bidirectional-data-flow-example.png": "/micro-frontends-anti-patterns/static/media/bidirectional-data-flow-example.cc396caeda0a04514671.png",
     "static/media/hub-like-dependency-problem.png": "/micro-frontends-anti-patterns/static/media/hub-like-dependency-problem.348a8aaba6f122087493.png",
     "static/media/super.jpg": "/micro-frontends-anti-patterns/static/media/super.84d6ea2627706d4b47a7.jpg",
@@ -26,10 +27,10 @@
     "static/media/cyclic-dependency-problem.png": "/micro-frontends-anti-patterns/static/media/cyclic-dependency-problem.2e45ee9e0d2b98a1e09e.png",
     "static/media/search-not-found.svg": "/micro-frontends-anti-patterns/static/media/search-not-found.137e9f81daba30ea54d90542979249ec.svg",
     "index.html": "/micro-frontends-anti-patterns/index.html",
-    "main.98703055.js.map": "/micro-frontends-anti-patterns/static/js/main.98703055.js.map",
+    "main.02056554.js.map": "/micro-frontends-anti-patterns/static/js/main.02056554.js.map",
     "453.b17c1d85.chunk.js.map": "/micro-frontends-anti-patterns/static/js/453.b17c1d85.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.98703055.js"
+    "static/js/main.02056554.js"
   ]
 }
