@@ -50,7 +50,7 @@ export const theme = extendTheme({
     'error-border': '#E57373',
     'error-background': '#FFEBEE',
     tag1: '#FFF3E0',
-    tag2: '#E8EAF6',
+    tag2: '#B2DAFA',
     tag3: '#FCE4EC',
     tag4: '#E8F5E9',
   },

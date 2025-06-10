@@ -26,14 +26,13 @@ export const AntiPatternItemTag = styled(Tag).attrs({
   size: 'sm',
   variant: 'solid',
   textColor: 'title-text',
-  alignSelf: 'center',
 })``;
 
 export const TextContainer = styled(Flex).attrs({
-  flexDirection: 'row',
+  flexDirection: 'column',
   display: 'flex',
-  flexWrap: 'wrap-reverse',
-  alignItems: 'baseline',
+  alignItems: 'start',
+  gap: '8px',
   margin: '24px 0px 12px 20px',
 })``;
 

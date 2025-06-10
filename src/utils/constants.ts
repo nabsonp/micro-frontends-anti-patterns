@@ -22,7 +22,7 @@ export const FilterProperties = {
     color: 'tag2',
     hint: 'Considers a single MFE component and its design.',
   },
-  Operation: {
+  Operations: {
     color: 'tag3',
     hint: 'Related to the operational practices and continuous maintenance of the application.',
   },

@@ -24,7 +24,7 @@ export const About = () => {
           implementation. It is a results from a collaboration between Federal
           University of Amazonas (UFAM) researchers and industry practitioners
           with extensive experience in Micro Frontends.This work is part Nabson
-          Silva's master's thesis project. On incorporating the anti-patterns,
+          Silva Master's Thesis. On incorporating the anti-patterns,
           practitioners validated each of them, ensuring they reflect real-world
           problems. We encourage Micro Frontends developers to contribute to the
           catalog by submitting issues or pull requests through the{' '}
@@ -53,9 +53,10 @@ export const About = () => {
         <SectionTitle>Related Papers</SectionTitle>
         <Text fontWeight={400} fontSize={'16px'} color={'paragraph-text'}>
           Silva, N., Rodrigues, E., Conte, T. (2025).{' '}
-          <b>A Catalog of Micro Frontends Anti–patterns</b>. arXiv preprint{' '}
-          <TextLink href="https://arxiv.org/abs/2411.19472">
-            arXiv:2411.19472
+          <b>A Catalog of Micro Frontends Anti–patterns</b>. <br /> IEEE/ACM
+          47th International Conference on Software Engineering (ICSE). DOI:{' '}
+          <TextLink href="https://doi.ieeecomputersociety.org/10.1109/ICSE55347.2025.00079">
+            10.1109/ICSE55347.2025.00079
           </TextLink>
           .
         </Text>
@@ -68,36 +69,51 @@ export const About = () => {
           <Flex
             gap="24px"
             justifyContent={'center'}
-            flexDirection={{ base: 'column', md: 'row' }}
+            flexDirection={{ base: 'column', xl: 'row' }}
+            alignItems={'center'}
           >
-            <Flex alignItems={'center'} flexDirection="column">
-              <ResearcherImage
-                src={require('../../assets/researchers/nabson-silva.jpeg')}
-              />
-              <TextLink href="https://www.researchgate.net/profile/Nabson-Silva">
-                Nabson Silva
-              </TextLink>
-              <Text>nabson.paiva@icomp.ufam.edu.br</Text>
+            <Flex flexDirection={{ base: 'column', sm: 'row' }} gap="24px">
+              <Flex alignItems={'center'} flexDirection="column">
+                <ResearcherImage
+                  src={require('../../assets/researchers/nabson-silva.jpeg')}
+                />
+                <TextLink href="https://scholar.google.com.br/citations?user=vFlNZEoAAAAJ">
+                  Nabson Silva
+                </TextLink>
+                <Text>nabson.paiva@icomp.ufam.edu.br</Text>
+              </Flex>
+
+              <Flex alignItems={'center'} flexDirection="column">
+                <ResearcherImage
+                  src={require('../../assets/researchers/eriky_rodrigues.jpg')}
+                />
+                <TextLink href="https://scholar.google.com.br/citations?user=spXYQTYAAAAJ">
+                  Eriky Rodrigues
+                </TextLink>
+                <Text>eriky.rodrigues@icomp.ufam.edu.br</Text>
+              </Flex>
             </Flex>
 
-            <Flex alignItems={'center'} flexDirection="column">
-              <ResearcherImage
-                src={require('../../assets/researchers/eriky_rodrigues.jpg')}
-              />
-              <TextLink href="https://www.researchgate.net/profile/Eriky-Rodrigues">
-                Eriky Rodrigues
-              </TextLink>
-              <Text>eriky.rodrigues@icomp.ufam.edu.br</Text>
-            </Flex>
+            <Flex flexDirection={{ base: 'column', sm: 'row' }} gap="24px">
+              <Flex alignItems={'center'} flexDirection="column">
+                <ResearcherImage
+                  src={require('../../assets/researchers/matheus_oliveira.jpg')}
+                />
+                <TextLink href="https://www.linkedin.com/in/matheusouzaoliveira/">
+                  Matheus Oliveira
+                </TextLink>
+                <Text>matheus.oliveira@icomp.ufam.edu.br</Text>
+              </Flex>
 
-            <Flex alignItems={'center'} flexDirection="column">
-              <ResearcherImage
-                src={require('../../assets/researchers/tayana_conte.jpg')}
-              />
-              <TextLink href="https://www.researchgate.net/profile/Tayana-Conte">
-                Tayana Conte
-              </TextLink>
-              <Text>tayana@icomp.ufam.edu.br</Text>
+              <Flex alignItems={'center'} flexDirection="column">
+                <ResearcherImage
+                  src={require('../../assets/researchers/tayana_conte.jpg')}
+                />
+                <TextLink href="https://scholar.google.com.br/citations?user=aThv_5UAAAAJ">
+                  Tayana Conte
+                </TextLink>
+                <Text>tayana@icomp.ufam.edu.br</Text>
+              </Flex>
             </Flex>
           </Flex>
         </Text>

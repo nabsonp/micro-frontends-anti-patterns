@@ -28,12 +28,12 @@ function RenderAntiPatterns({
           onClick={() => handleClickItem(item)}
         >
           <TextContainer>
-            <AntiPatternItemTitle>{item.name}</AntiPatternItemTitle>
             <AntiPatternItemTag
               background={FilterProperties[item.category]?.color}
             >
               {item.category}
             </AntiPatternItemTag>
+            <AntiPatternItemTitle>{item.name}</AntiPatternItemTitle>
           </TextContainer>
           <AntiPatternItemDescriptionText>
             <Highlight query={search}>
